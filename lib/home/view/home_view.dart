@@ -18,6 +18,11 @@ class HomeView extends StatelessWidget {
     padding: EdgeInsets.all(16),
   );
 
+  final Widget _footer = Padding(
+    child: Image.asset(AppImages.OsascoLogo, height: 80),
+    padding: EdgeInsets.all(16),
+  );
+
   @override
   Widget build(BuildContext context) {
     final _margin = (MediaQuery.of(context).size.width - 320) / 3;
@@ -27,12 +32,14 @@ class HomeView extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: _margin, crossAxisSpacing: _margin),
       children: _buttonList,
     );
+    final _buttonsBox = SizedBox(height: (_buttonList.length / 2).ceil() * (_margin + 160), child: gridView);
     return Container(
       color: AppColors.backgroundBlue,
       child: ListView(
         children: [
           _logo,
-          SizedBox(height: (_buttonList.length / 2).ceil() * (_margin + 160), child: gridView),
+          _buttonsBox,
+          _footer,
         ],
       ),
     );
