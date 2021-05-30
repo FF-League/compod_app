@@ -1,3 +1,4 @@
+import 'package:compod_app/forms/forms_view.dart';
 import 'package:compod_app/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

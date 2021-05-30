@@ -9,6 +9,10 @@ class AppImages {
   static const Volunteer    = '${_path}Volunteer.png';
   static const Donate       = '${_path}Donate.png';
   static const Anjinho      = '${_path}Angel-256.png';
+  static const Psycho       = '${_path}Psycho.png';
+  static const Heart        = '${_path}Heart.png';
+  static const Judge        = '${_path}Judge.png';
+  static const Hospital     = '${_path}Hospital.png';
 
   AppImages._();
 

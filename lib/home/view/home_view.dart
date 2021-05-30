@@ -9,7 +9,7 @@ class HomeView extends StatelessWidget {
   final _buttonList = [
     HomeTile(AppImages.Doctor, 'Solicitar atendimento'),
     // HomeTile(AppImages.Anjinho, 'Botão Anjinho'),
-    HomeTile(AppImages.Volunteer, 'Seja um voluntário'),
+    HomeTile(AppImages.Heart, 'Seja um voluntário'),
     HomeTile(AppImages.Donate, 'Doações'),
   ];
 
