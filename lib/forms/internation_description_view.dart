@@ -55,41 +55,33 @@ class InternationDescriptionView extends StatelessWidget {
       ),
     );
 
+    var buttonWidget = Padding(
+            padding: const EdgeInsets.all(16),
+            child: MaterialButton(
+                color: AppColors.buttonBlue1,
+                child: Center(child: buttonText),
+                onPressed: continueAction
+            ),
+          );
     return Scaffold(
       appBar: appBar,
       backgroundColor: AppColors.backgroundBlue,
-      body: LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints constraints) =>
-         Expanded(
-           child: Center(
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 22, vertical: 42),
-                    margin: EdgeInsets.all(16),
-                    color: AppColors.backgroundBlue2,
-                    child: Column(
-                      children: [
-                        titleText,
-                        textContent,
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: MaterialButton(
-                      color: AppColors.buttonBlue1,
-                      child: Center(child: buttonText),
-                      onPressed: continueAction,
-                    ),
-                  ),
-                ],
-              ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 22, vertical: 42),
+            margin: EdgeInsets.all(16),
+            color: AppColors.backgroundBlue2,
+            child: Column(
+              children: [
+                titleText,
+                textContent,
+              ],
             ),
-        ),
-         ),
+          ),
+          buttonWidget,
+        ],
       ),
     );
   }
