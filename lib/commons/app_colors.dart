@@ -7,6 +7,7 @@ class AppColors {
   static final Color buttonBlue1      = HexColor("#003555");
   static final Color buttonBlue2      = HexColor("#005682");
   static final Color green            = HexColor("#52F28A");
+  static final Color contornoBlue     = Color.fromRGBO(75, 118, 203, 1);
   // static final Color green            = Colors.white;
 
   static final theme = ThemeData(
