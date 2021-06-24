@@ -26,6 +26,35 @@ class _FormsInputViewState extends State<FormsInputView> {
     fontSize: 16.0,
   );
 
+  var buttonText = Text(
+    "Continuar",
+    style: TextStyle(
+      fontFamily: AppFonts.Palanquin,
+      color: Colors.white,
+      fontSize: 24,
+      fontWeight: FontWeight.w600,
+    ),
+  );
+
+  var buttonWidget = Padding(
+    padding: const EdgeInsets.all(16),
+    child: MaterialButton(
+      color: AppColors.buttonBlue1,
+      child: Center(
+        child: Text(
+          "Continuar",
+          style: TextStyle(
+            fontFamily: AppFonts.Palanquin,
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+      onPressed: () {},
+    ),
+  );
+
   final header = Padding(
     padding: EdgeInsets.all(16),
     child: Text(
@@ -57,12 +86,10 @@ class _FormsInputViewState extends State<FormsInputView> {
 
   Widget buildText(String text) {
     return Container(
-        width: double.infinity,
-        child: Text(text, style: headerStyle)
-    );
+        width: double.infinity, child: Text(text, style: headerStyle));
   }
 
-  ListTile buildRadioButton(String text){
+  ListTile buildRadioButton(String text) {
     return ListTile(
       title: Text(text, style: headerStyle),
       leading: Radio<String>(
@@ -77,7 +104,7 @@ class _FormsInputViewState extends State<FormsInputView> {
       ),
     );
   }
-  
+
   @override
   Widget build(BuildContext context) {
     final formsWidget = Container(
@@ -86,8 +113,7 @@ class _FormsInputViewState extends State<FormsInputView> {
       decoration: BoxDecoration(
           color: AppColors.contornoBlue,
           borderRadius: BorderRadius.all(Radius.circular(16.0)),
-          boxShadow: [BoxShadow(blurRadius: 5.0, offset: Offset(2, 2))]
-      ),
+          boxShadow: [BoxShadow(blurRadius: 5.0, offset: Offset(2, 2))]),
       child: Form(
         key: formKey,
         child: Column(
@@ -127,6 +153,7 @@ class _FormsInputViewState extends State<FormsInputView> {
         children: [
           header,
           formsWidget,
+          buttonWidget,
         ],
       ),
     );
