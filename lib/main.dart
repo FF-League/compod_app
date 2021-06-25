@@ -1,5 +1,7 @@
-import 'package:compod_app/forms/forms_view.dart';
-import 'package:compod_app/forms/internation_description_view.dart';
+import 'package:compod_app/commons/app_colors.dart';
+import 'package:compod_app/commons/strings.dart';
+import 'package:compod_app/forms/views/forms_select_view.dart';
+import 'package:compod_app/forms/views/internation_description_view.dart';
 import 'package:compod_app/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,10 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      translations: Strings(),
+      locale: Locale('pt', 'BR'),
+      title: StringsEnum.COMPOD.name.tr,
+      theme: AppColors.theme,
       home: InternationDescriptionView(),
     );
   }
