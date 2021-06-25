@@ -11,7 +11,8 @@ class AppColors {
   // static final Color green            = Colors.white;
 
   static final theme = ThemeData(
-    backgroundColor: backgroundBlue
+    backgroundColor: backgroundBlue,
+    accentColor: AppColors.green
   );
 
 }
