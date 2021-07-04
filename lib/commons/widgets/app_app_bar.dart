@@ -3,7 +3,7 @@ import 'package:compod_app/commons/app_fonts.dart';
 import 'package:flutter/material.dart';
 
 class AppAppBar extends AppBar {
-  AppAppBar({String text, Key key})
+  AppAppBar({required String text, Key? key})
       : super(
           key: key,
           centerTitle: true,

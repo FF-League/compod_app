@@ -3,7 +3,7 @@ import 'package:compod_app/commons/app_fonts.dart';
 import 'package:flutter/material.dart';
 
 class AppRaisedButton extends StatelessWidget {
-  const AppRaisedButton({this.buttonText, @required this.action, Key key}) : super(key: key);
+  const AppRaisedButton({required this.buttonText, required this.action, Key? key}) : super(key: key);
 
   final String buttonText;
   final void Function() action;
