@@ -1,27 +1,19 @@
 import 'package:compod_app/commons/app_colors.dart';
 import 'package:compod_app/commons/app_fonts.dart';
+import 'package:compod_app/commons/strings.dart';
+import 'package:compod_app/commons/widgets/app_app_bar.dart';
+import 'package:compod_app/commons/widgets/app_raised_button.dart';
+import 'package:compod_app/forms/forms_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class InternationDescriptionView extends StatelessWidget {
   InternationDescriptionView({Key? key}) : super(key: key);
 
-  var title = "Atendimento Psicológico";
-  var content = "xxxxxxxxxxxx";
-  var appBar = AppBar(
-    centerTitle: true,
-    backgroundColor: AppColors.buttonBlue1,
-    title: Text(
-      "Internação",
-      style: TextStyle(
-        fontFamily: AppFonts.PalanquinDark,
-        color: AppColors.green,
-        fontSize: 32,
-        fontWeight: FontWeight.w600,
-      ),
-    ),
-  );
+  final title = FormsStringsEnum.psychologicalTreatment.name.tr;
+  final content = "xxxxxxxxxxxx";
 
-  void continueAction() {}
+  void _continueAction() {}
 
   @override
   Widget build(BuildContext context) {
@@ -45,31 +37,14 @@ class InternationDescriptionView extends StatelessWidget {
       ),
     );
 
-    var buttonText = Text(
-      "Continuar",
-      style: TextStyle(
-        fontFamily: AppFonts.Palanquin,
-        color: Colors.white,
-        fontSize: 24,
-        fontWeight: FontWeight.w600,
-      ),
-    );
-
-    var buttonWidget = Padding(
-            padding: const EdgeInsets.all(16),
-            child: MaterialButton(
-                color: AppColors.buttonBlue1,
-                child: Center(child: buttonText),
-                onPressed: continueAction
-            ),
-          );
     return Scaffold(
-      appBar: appBar,
+      appBar: AppAppBar(text: FormsStringsEnum.hospitalization.name.tr),
       backgroundColor: AppColors.backgroundBlue,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
+            width: double.infinity,
             padding: EdgeInsets.symmetric(horizontal: 22, vertical: 42),
             margin: EdgeInsets.all(16),
             color: AppColors.backgroundBlue2,
@@ -80,7 +55,10 @@ class InternationDescriptionView extends StatelessWidget {
               ],
             ),
           ),
-          buttonWidget,
+          AppRaisedButton(
+            action: _continueAction,
+            buttonText: StringsEnum.continueButton.name.tr,
+          ),
         ],
       ),
     );
