@@ -5,7 +5,7 @@ import 'package:compod_app/commons/app_fonts.dart';
 import 'package:flutter/material.dart';
 
 class FormsTile extends StatefulWidget {
-  FormsTile(this.image, this.text, {Key key}) : super(key: key);
+  FormsTile(this.image, this.text, {Key? key}) : super(key: key);
 
   final String image;
   final String text;

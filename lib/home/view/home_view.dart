@@ -4,7 +4,7 @@ import 'package:compod_app/home/view/components/home_tile.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
-  HomeView({Key key}) : super(key: key);
+  HomeView({Key? key}) : super(key: key);
 
   final _buttonList = [
     HomeTile(AppImages.Doctor, 'Solicitar atendimento'),

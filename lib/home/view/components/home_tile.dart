@@ -5,7 +5,7 @@ import 'package:compod_app/commons/app_fonts.dart';
 import 'package:flutter/material.dart';
 
 class HomeTile extends StatefulWidget {
-  HomeTile(this.image, this.text, {Key key}) : super(key: key);
+  HomeTile(this.image, this.text, {Key? key}) : super(key: key);
 
   final String image;
   final String text;

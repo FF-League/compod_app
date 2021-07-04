@@ -3,7 +3,7 @@ import 'package:compod_app/commons/app_fonts.dart';
 import 'package:flutter/material.dart';
 
 class InternationDescriptionView extends StatelessWidget {
-  InternationDescriptionView({Key key}) : super(key: key);
+  InternationDescriptionView({Key? key}) : super(key: key);
 
   var title = "Atendimento Psicológico";
   var content = "xxxxxxxxxxxx";
