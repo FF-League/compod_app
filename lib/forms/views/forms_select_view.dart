@@ -2,10 +2,11 @@ import 'package:compod_app/commons/app_colors.dart';
 import 'package:compod_app/commons/app_fonts.dart';
 import 'package:compod_app/commons/app_images.dart';
 import 'package:compod_app/commons/widgets/app_app_bar.dart';
-import 'package:compod_app/forms/components/forms_tile.dart';
 import 'package:compod_app/forms/forms_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'components/forms_tile.dart';
 
 class FormsSelectView extends StatelessWidget {
   @override
