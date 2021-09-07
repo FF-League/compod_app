@@ -1,9 +1,10 @@
-import 'package:compod_app/commons/app_colors.dart';
-import 'package:compod_app/commons/app_fonts.dart';
+import 'package:compod_app/commons/compod_colors.dart';
+import 'package:compod_app/commons/compod_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class AppRaisedButton extends StatelessWidget {
-  const AppRaisedButton({required this.buttonText, required this.action, Key? key}) : super(key: key);
+class CompodRaisedButton extends StatelessWidget {
+  const CompodRaisedButton({required this.buttonText, required this.action, Key? key}) : super(key: key);
 
   final String buttonText;
   final void Function() action;
@@ -15,18 +16,13 @@ class AppRaisedButton extends StatelessWidget {
       child: MaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
         onPressed: action,
-        color: AppColors.buttonBlue1,
+        color: Get.theme.primaryColorDark,
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              this.buttonText,
-              style: TextStyle(
-                fontFamily: AppFonts.Palanquin,
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.w500,
-              ),
+              this.buttonText.toUpperCase(),
+              style: Get.textTheme.button
             ),
           ),
         ),

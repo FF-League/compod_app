@@ -1,8 +1,9 @@
 import 'dart:ui';
 
-import 'package:compod_app/commons/app_colors.dart';
-import 'package:compod_app/commons/app_fonts.dart';
+import 'package:compod_app/commons/compod_colors.dart';
+import 'package:compod_app/commons/compod_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeTile extends StatefulWidget {
   HomeTile(this.image, this.text, {Key? key}) : super(key: key);
@@ -27,10 +28,9 @@ class _HomeTileState extends State<HomeTile> {
     return Container(
       decoration: BoxDecoration(
         boxShadow: [BoxShadow(color: Colors.black45, blurRadius: 2, spreadRadius: 2, offset: Offset(0, 2))],
-        border: Border.all(color: _highlighted ? AppColors.green.withOpacity(0.6) : Colors.white.withOpacity(0.6), width: 2),
+        border: Border.all(color: _highlighted ? Get.theme.accentColor.withOpacity(0.6) : Colors.white.withOpacity(0.6), width: 2),
         borderRadius: BorderRadius.circular(5),
-        gradient: LinearGradient(begin: Alignment(0, 0.4), end: Alignment.bottomCenter, colors: [AppColors.buttonBlue1, AppColors.buttonBlue2]),
-        // color: AppColors.buttonBlue,
+        gradient: LinearGradient(begin: Alignment(0, 0.4), end: Alignment.bottomCenter, colors: [Get.theme.primaryColor, Get.theme.primaryColorDark]),
       ),
       width: _size,
       height: _size,
@@ -56,7 +56,7 @@ class _HomeTileState extends State<HomeTile> {
                       decoration: TextDecoration.none,
                       fontSize: 18,
                       color: Colors.white,
-                      fontFamily: AppFonts.PalanquinDark,
+                      fontFamily: CompodFonts.PalanquinDark,
                       fontWeight: FontWeight.w600),
                 ),
               ),

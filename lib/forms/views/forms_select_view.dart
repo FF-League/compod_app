@@ -1,7 +1,7 @@
-import 'package:compod_app/commons/app_colors.dart';
-import 'package:compod_app/commons/app_fonts.dart';
-import 'package:compod_app/commons/app_images.dart';
-import 'package:compod_app/commons/widgets/app_app_bar.dart';
+import 'package:compod_app/commons/compod_fonts.dart';
+import 'package:compod_app/commons/compod_images.dart';
+import 'package:compod_app/components/widgets/compod_app_bar.dart';
+import 'package:compod_app/forms/controller/forms_controller.dart';
 import 'package:compod_app/forms/forms_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,6 +9,9 @@ import 'package:get/get.dart';
 import 'components/forms_tile.dart';
 
 class FormsSelectView extends StatelessWidget {
+
+  final FormsController controller = Get.find();
+
   @override
   Widget build(BuildContext context) {
     final header = Padding(
@@ -21,15 +24,14 @@ class FormsSelectView extends StatelessWidget {
             decoration: TextDecoration.none,
             fontSize: 24,
             color: Colors.white,
-            fontFamily: AppFonts.PalanquinDark,
+            fontFamily: CompodFonts.PalanquinDark,
             fontWeight: FontWeight.w400,
         ),
       ),
     );
     return Scaffold(
-      appBar: AppAppBar(text: FormsStringsEnum.hospitalization.name.tr),
+      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.name.tr),
       body: Container(
-        color: AppColors.backgroundBlue,
         child: ListView(
           children: [
             header,

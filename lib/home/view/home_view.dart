@@ -1,5 +1,5 @@
-import 'package:compod_app/commons/app_colors.dart';
-import 'package:compod_app/commons/app_images.dart';
+import 'package:compod_app/commons/compod_colors.dart';
+import 'package:compod_app/commons/compod_images.dart';
 import 'package:compod_app/home/view/components/home_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +34,7 @@ class HomeView extends StatelessWidget {
     );
     final _buttonsBox = SizedBox(height: (_buttonList.length / 2).ceil() * (_margin + 160), child: gridView);
     return Container(
-      color: AppColors.backgroundBlue,
+      // color: CompodColors.backgroundBlue,
       child: ListView(
         children: [
           _logo,
