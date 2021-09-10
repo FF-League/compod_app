@@ -19,7 +19,7 @@ class HomeView extends StatelessWidget {
     final _ = Get.put(HomeController());
 
     final _margin = (MediaQuery.of(context).size.width - 320) / 3;
-    final _height = (_buttonList.length / 2).ceil() * (_margin + 160);
+    final _height = max((_buttonList.length / 2).ceil() * (_margin + 160), (context.height - (6 * 16.0 + 2 * 80)));
     return Scaffold(
       body: ListView(
         children: [
