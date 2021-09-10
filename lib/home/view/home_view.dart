@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:compod_app/commons/compod_images.dart';
 import 'package:compod_app/home/controller/home_controller.dart';
 import 'package:compod_app/home/view/components/home_tile.dart';
