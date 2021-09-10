@@ -1,5 +1,3 @@
-import 'package:compod_app/commons/compod_colors.dart';
-import 'package:compod_app/commons/compod_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

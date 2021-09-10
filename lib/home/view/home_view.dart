@@ -1,45 +1,31 @@
-import 'package:compod_app/commons/compod_colors.dart';
 import 'package:compod_app/commons/compod_images.dart';
+import 'package:compod_app/home/controller/home_controller.dart';
 import 'package:compod_app/home/view/components/home_tile.dart';
+import 'package:compod_app/home/view/components/home_tile_grid.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
 
   final _buttonList = [
-    HomeTile(AppImages.Doctor, 'Solicitar atendimento'),
-    // HomeTile(AppImages.Anjinho, 'Botão Anjinho'),
-    HomeTile(AppImages.Heart, 'Seja um voluntário'),
-    HomeTile(AppImages.Donate, 'Doações'),
+    HomeTile(type: HomeTileType.Doctor, text: 'Solicitar atendimento'),
+    HomeTile(type: HomeTileType.Heart, text: 'Seja um voluntário'),
+    HomeTile(type: HomeTileType.Donate, text: 'Doações'),
   ];
-
-  final Widget _logo = Padding(
-    child: Image.asset(AppImages.WhiteLogo, height: 80),
-    padding: EdgeInsets.all(16),
-  );
-
-  final Widget _footer = Padding(
-    child: Image.asset(AppImages.OsascoLogo, height: 80),
-    padding: EdgeInsets.all(16),
-  );
 
   @override
   Widget build(BuildContext context) {
+    final _ = Get.put(HomeController());
+
     final _margin = (MediaQuery.of(context).size.width - 320) / 3;
-    final gridView = GridView(
-      padding: EdgeInsets.symmetric(horizontal: _margin),
-      physics: NeverScrollableScrollPhysics(),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, mainAxisSpacing: _margin, crossAxisSpacing: _margin),
-      children: _buttonList,
-    );
-    final _buttonsBox = SizedBox(height: (_buttonList.length / 2).ceil() * (_margin + 160), child: gridView);
-    return Container(
-      // color: CompodColors.backgroundBlue,
-      child: ListView(
+    final _height = (_buttonList.length / 2).ceil() * (_margin + 160);
+    return Scaffold(
+      body: ListView(
         children: [
-          _logo,
-          _buttonsBox,
-          _footer,
+          Padding(child: Image.asset(AppImages.WhiteLogo, height: 80), padding: EdgeInsets.all(16)),
+          SizedBox(height: _height, child: HomeTileGrid(margin: _margin, buttonList: _buttonList)),
+          Padding(padding: EdgeInsets.all(16), child: Image.asset(AppImages.OsascoLogo, height: 80)),
         ],
       ),
     );

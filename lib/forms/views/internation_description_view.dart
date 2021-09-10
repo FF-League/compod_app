@@ -24,17 +24,12 @@ class InternationDescriptionView extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 22, vertical: 42),
             margin: EdgeInsets.all(16),
             color: Colors.white24,
-            child: Column(
-              children: [
-                Text(FormsStringsEnum.psychologicalTreatment.name.tr, style: Get.textTheme.headline4),
-                Text(content, style: Get.textTheme.bodyText1),
-              ],
-            ),
+            child: Column(children: [
+              Text(FormsStringsEnum.psychologicalTreatment.name.tr, style: Get.textTheme.headline4),
+              Text(content, style: Get.textTheme.bodyText1),
+            ]),
           ),
-          CompodRaisedButton(
-            action: _continueAction,
-            buttonText: StringsEnum.continueButton.name.tr,
-          ),
+          CompodRaisedButton(action: _continueAction, buttonText: StringsEnum.continueButton.name.tr),
         ],
       ),
     );
