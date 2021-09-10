@@ -1,11 +1,12 @@
 import 'package:flutter/foundation.dart';
 
-class FormsTranslations {
+class InternationTranslations {
   static Map<String, String> get keys => {
         FormsStringsEnum.psychologicalTreatment.name: 'Atendimento Psicológico',
         FormsStringsEnum.hospitalization.name: 'Internação',
         FormsStringsEnum.psychologicalTreatmentLineBreak.name: 'Atendimento\nPsicológico',
         FormsStringsEnum.socialAssistanceLineBreak.name: 'Assistência\nSocial',
+        FormsStringsEnum.socialAssistance.name: 'Assistência Social',
         FormsStringsEnum.juridical.name: 'Jurídico',
         FormsStringsEnum.voluntaryHospitalization.name: 'Internação\nVoluntária',
         FormsStringsEnum.formsSelectViewHeader.name: 'Selecione o tipo\nde internação'
@@ -17,6 +18,7 @@ enum FormsStringsEnum {
   psychologicalTreatmentLineBreak,
   hospitalization,
   voluntaryHospitalization,
+  socialAssistance,
   socialAssistanceLineBreak,
   juridical,
   formsSelectViewHeader

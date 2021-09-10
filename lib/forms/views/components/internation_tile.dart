@@ -1,5 +1,5 @@
 import 'package:compod_app/forms/controller/internation_controller.dart';
-import 'package:compod_app/forms/views/components/internation_type.dart';
+import 'package:compod_app/forms/models/internation_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
