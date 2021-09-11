@@ -1,4 +1,4 @@
-class AppImages {
+class CompodImages {
 
   static const _path        = 'assets/images/icons/';
 
@@ -14,6 +14,6 @@ class AppImages {
   static const Judge        = '${_path}Judge.png';
   static const Hospital     = '${_path}Hospital.png';
 
-  AppImages._();
+  CompodImages._();
 
 }

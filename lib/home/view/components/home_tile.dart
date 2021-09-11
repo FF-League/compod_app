@@ -55,9 +55,9 @@ enum HomeTileType {
 extension on HomeTileType {
   String get image {
     switch (this) {
-      case HomeTileType.Doctor: return AppImages.Doctor;
-      case HomeTileType.Donate: return AppImages.Donate;
-      case HomeTileType.Heart: return AppImages.Heart;
+      case HomeTileType.Doctor: return CompodImages.Doctor;
+      case HomeTileType.Donate: return CompodImages.Donate;
+      case HomeTileType.Heart: return CompodImages.Heart;
     }
   }
 }

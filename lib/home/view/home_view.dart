@@ -25,9 +25,9 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          Padding(child: Image.asset(AppImages.WhiteLogo, height: 80), padding: EdgeInsets.all(16)),
+          Padding(child: Image.asset(CompodImages.WhiteLogo, height: 80), padding: EdgeInsets.all(16)),
           SizedBox(height: _height, child: HomeTileGrid(margin: _margin, buttonList: _buttonList)),
-          Padding(padding: EdgeInsets.all(16), child: Image.asset(AppImages.OsascoLogo, height: 80)),
+          Padding(padding: EdgeInsets.all(16), child: Image.asset(CompodImages.OsascoLogo, height: 80)),
         ],
       ),
     );

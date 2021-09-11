@@ -14,10 +14,10 @@ extension InternationTypeExt on InternationType {
 
   String get image {
     switch (this) {
-      case InternationType.internation: return AppImages.Psycho;
-      case InternationType.juridical: return AppImages.Hospital;
-      case InternationType.psychology: return AppImages.Judge;
-      case InternationType.voluntary: return AppImages.Volunteer;
+      case InternationType.internation: return CompodImages.Psycho;
+      case InternationType.juridical: return CompodImages.Hospital;
+      case InternationType.psychology: return CompodImages.Judge;
+      case InternationType.voluntary: return CompodImages.Volunteer;
     }
   }
 
