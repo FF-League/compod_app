@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 class InternationController extends GetxController {
   var description = ''.obs;
   var name = ''.obs;
+  var sexValue = ''.obs;
 
   void setupDescriptionValues(InternationType type) async {
     name.value = type.text;
@@ -15,5 +16,9 @@ class InternationController extends GetxController {
   void selectInternationType(InternationType type) {
     setupDescriptionValues(type);
     Get.toNamed('/internation/description');
+  }
+
+  void goToFormInput() {
+    Get.toNamed('/internation/form');
   }
 }
