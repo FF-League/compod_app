@@ -1,4 +1,4 @@
-import 'package:compod_app/forms/internation_strings.dart';
+import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:compod_app/mini_book/mini_book_strings.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
@@ -6,13 +6,14 @@ import 'package:get/get.dart';
 class Strings extends Translations {
   Map<String, String> get getMaps => {
         ...commonMaps,
-        ...InternationTranslations.keys,
+        ...HospitalizationTranslations.keys,
         ...MiniBookTranslations.keys,
       };
 
   static Map<String, String> get commonMaps => {
         StringsEnum.COMPOD.name: "COMPOD",
         StringsEnum.continueButton.name: "Continuar",
+        StringsEnum.sendButton.name: "Enviar",
       };
 
   @override
@@ -22,6 +23,7 @@ class Strings extends Translations {
 enum StringsEnum {
   COMPOD,
   continueButton,
+  sendButton
 }
 
 extension on StringsEnum {
