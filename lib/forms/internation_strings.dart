@@ -1,3 +1,4 @@
+import 'package:get/get.dart';
 
 class InternationTranslations {
   static Map<String, String> get keys => {
@@ -25,6 +26,10 @@ enum FormsStringsEnum {
   successFormsMessage,
 }
 
-extension InternationStringsEnumExt on FormsStringsEnum {
+extension on FormsStringsEnum {
   String get name => this.toString();
+}
+
+extension InternationStringsEnumExt on FormsStringsEnum {
+  String get tr => name.tr;
 }

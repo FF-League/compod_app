@@ -28,7 +28,7 @@ class MiniBookView extends GetView<MiniBookController> {
           ),
         ],
       ),
-      appBar: CompodAppBar(text: MiniBookStringsEnum.name.name.tr),
+      appBar: CompodAppBar(text: MiniBookStringsEnum.name.tr),
       body: Obx(
         () => InteractiveViewer(
           maxScale: 3.0,

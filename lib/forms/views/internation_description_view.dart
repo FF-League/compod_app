@@ -14,7 +14,7 @@ class InternationDescriptionView extends StatelessWidget {
     final InternationController controller = Get.find();
 
     return Scaffold(
-      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.name.tr),
+      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.tr),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -39,7 +39,7 @@ class InternationDescriptionView extends StatelessWidget {
               ),
             ),
           ),
-          CompodRaisedButton(action: controller.goToFormInput, buttonText: StringsEnum.continueButton.name.tr),
+          CompodRaisedButton(action: controller.goToFormInput, buttonText: StringsEnum.continueButton.tr),
         ],
       ),
     );

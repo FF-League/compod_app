@@ -24,6 +24,10 @@ enum StringsEnum {
   continueButton,
 }
 
-extension StringsEnumExt on StringsEnum {
+extension on StringsEnum {
   String get name => describeEnum(this);
+}
+
+extension StringsEnumExt on StringsEnum {
+  String get tr => name.tr;
 }
