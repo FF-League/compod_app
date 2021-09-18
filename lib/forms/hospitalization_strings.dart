@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class InternationTranslations {
+class HospitalizationTranslations {
   static Map<String, String> get keys => {
         FormsStringsEnum.psychologicalTreatment.name: 'Atendimento Psicológico',
         FormsStringsEnum.hospitalization.name: 'Internação',
@@ -8,7 +8,7 @@ class InternationTranslations {
         FormsStringsEnum.socialAssistanceLineBreak.name: 'Assistência\nSocial',
         FormsStringsEnum.socialAssistance.name: 'Assistência Social',
         FormsStringsEnum.juridical.name: 'Jurídico',
-        FormsStringsEnum.voluntaryHospitalization.name: 'Internação\nVoluntária',
+        FormsStringsEnum.voluntaryHospitalization.name: 'Internação Voluntária em\nComunidades Terapêuticas ',
         FormsStringsEnum.formsSelectViewHeader.name: 'Selecione o tipo\nde internação',
         FormsStringsEnum.successFormsMessage.name: 'Obrigado pela inscrição!\n\nRecebemos suas informações com sucesso!\n\nAssim que possível entraremos em contato.',
       };
@@ -30,6 +30,6 @@ extension on FormsStringsEnum {
   String get name => this.toString();
 }
 
-extension InternationStringsEnumExt on FormsStringsEnum {
+extension HospitalizationStringsEnumExt on FormsStringsEnum {
   String get tr => name.tr;
 }

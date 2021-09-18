@@ -1,21 +1,21 @@
 import 'package:compod_app/commons/strings.dart';
 import 'package:compod_app/components/widgets/compod_app_bar.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
-import 'package:compod_app/forms/controller/internation_controller.dart';
+import 'package:compod_app/forms/controller/hospitalization_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'components/compod_form_field.dart';
 
-class InternationForm extends StatefulWidget {
+class HospitalizationForm extends StatefulWidget {
   @override
-  _InternationFormState createState() => _InternationFormState();
+  _HospitalizationFormState createState() => _HospitalizationFormState();
 }
 
-class _InternationFormState extends State<InternationForm> {
+class _HospitalizationFormState extends State<HospitalizationForm> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
-  InternationController controller = Get.find();
+  HospitalizationController controller = Get.find();
 
   Widget buildText(String text) => Container(width: double.infinity, child: Text(text, style: Get.textTheme.bodyText1));
 

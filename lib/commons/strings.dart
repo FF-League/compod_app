@@ -1,4 +1,4 @@
-import 'package:compod_app/forms/internation_strings.dart';
+import 'package:compod_app/forms/hospitalization_strings.dart';
 import 'package:compod_app/mini_book/mini_book_strings.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 class Strings extends Translations {
   Map<String, String> get getMaps => {
         ...commonMaps,
-        ...InternationTranslations.keys,
+        ...HospitalizationTranslations.keys,
         ...MiniBookTranslations.keys,
       };
 

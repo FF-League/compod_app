@@ -1,6 +1,6 @@
 import 'package:compod_app/commons/compod_images.dart';
 import 'package:compod_app/components/widgets/compod_app_bar.dart';
-import 'package:compod_app/forms/internation_strings.dart';
+import 'package:compod_app/forms/hospitalization_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
