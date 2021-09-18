@@ -7,28 +7,21 @@ import 'package:get/get.dart';
 
 import 'components/compod_form_field.dart';
 
-class HospitalizationForm extends StatefulWidget {
-  @override
-  _HospitalizationFormState createState() => _HospitalizationFormState();
-}
-
-class _HospitalizationFormState extends State<HospitalizationForm> {
+class HospitalizationForm extends GetView<HospitalizationController> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
-  HospitalizationController controller = Get.find();
 
   Widget buildText(String text) => Container(width: double.infinity, child: Text(text, style: Get.textTheme.bodyText1));
 
-  ListTile buildRadioButton(String text) {
-    return ListTile(
+  Widget buildRadioButton(String text) {
+    return Obx(() => ListTile(
       title: Text(text, style: Get.textTheme.bodyText1),
       leading: Radio<String>(
         activeColor: Get.theme.colorScheme.secondary,
         value: text,
-        onChanged: (v) => setState(() => controller.sexValue.value = v ?? ""),
+        onChanged: (v) => controller.sexValue.value = v ?? "",
         groupValue: controller.sexValue.value,
       ),
-    );
+    ));
   }
 
   @override
@@ -78,7 +71,7 @@ class _HospitalizationFormState extends State<HospitalizationForm> {
             ),
           ),
           formsWidget,
-          CompodRaisedButton(buttonText: StringsEnum.sendButton.tr, action: () {}),
+          CompodRaisedButton(buttonText: StringsEnum.sendButton.tr, action: controller.goToSuccessView),
         ],
       ),
     );
