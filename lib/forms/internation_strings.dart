@@ -9,7 +9,8 @@ class InternationTranslations {
         FormsStringsEnum.socialAssistance.name: 'Assistência Social',
         FormsStringsEnum.juridical.name: 'Jurídico',
         FormsStringsEnum.voluntaryHospitalization.name: 'Internação\nVoluntária',
-        FormsStringsEnum.formsSelectViewHeader.name: 'Selecione o tipo\nde internação'
+        FormsStringsEnum.formsSelectViewHeader.name: 'Selecione o tipo\nde internação',
+        FormsStringsEnum.successFormsMessage.name: 'Obrigado pela inscrição!\n\nRecebemos suas informações com sucesso!\n\nAssim que possível entraremos em contato.',
       };
 }
 
@@ -21,7 +22,8 @@ enum FormsStringsEnum {
   socialAssistance,
   socialAssistanceLineBreak,
   juridical,
-  formsSelectViewHeader
+  formsSelectViewHeader,
+  successFormsMessage,
 }
 
 extension FormsStringsEnumExt on FormsStringsEnum {

@@ -5,6 +5,8 @@ class CompodImages {
   static const WhiteLogo    = 'assets/images/COMPOD_white_logo.png';
   static const OsascoLogo   = 'assets/images/OSASCO_logo.png';
 
+  static const Check        = '${_path}Check.png';
+  static const MadRobot     = '${_path}MadRobot.png';
   static const Doctor       = '${_path}Doctor.png';
   static const Volunteer    = '${_path}Volunteer.png';
   static const Donate       = '${_path}Donate.png';
