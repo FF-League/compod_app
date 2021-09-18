@@ -5,13 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SuccessView extends StatelessWidget {
-
   static const _imageSize = 130.0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.name.tr,),
+      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.name.tr),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -23,7 +22,7 @@ class SuccessView extends StatelessWidget {
             ],
           ),
         ),
-      )
+      ),
     );
   }
 }
