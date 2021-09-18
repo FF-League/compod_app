@@ -1,4 +1,5 @@
 import 'package:compod_app/forms/internation_strings.dart';
+import 'package:compod_app/mini_book/mini_book_strings.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
@@ -6,6 +7,7 @@ class Strings extends Translations {
   Map<String, String> get getMaps => {
         ...commonMaps,
         ...InternationTranslations.keys,
+        ...MiniBookTranslations.keys,
       };
 
   static Map<String, String> get commonMaps => {

@@ -50,6 +50,7 @@ enum HomeTileType {
   Doctor,
   Heart,
   Donate,
+  Anjinho,
 }
 
 extension on HomeTileType {
@@ -58,6 +59,7 @@ extension on HomeTileType {
       case HomeTileType.Doctor: return CompodImages.Doctor;
       case HomeTileType.Donate: return CompodImages.Donate;
       case HomeTileType.Heart: return CompodImages.Heart;
+      case HomeTileType.Anjinho: return CompodImages.Anjinho;
     }
   }
 }

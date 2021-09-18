@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 
 class InternationTranslations {
   static Map<String, String> get keys => {
@@ -24,6 +23,6 @@ enum FormsStringsEnum {
   formsSelectViewHeader
 }
 
-extension FormsStringsEnumExt on FormsStringsEnum {
-  String get name => describeEnum(this);
+extension InternationStringsEnumExt on FormsStringsEnum {
+  String get name => this.toString();
 }
