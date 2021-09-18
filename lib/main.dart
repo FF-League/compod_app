@@ -1,7 +1,6 @@
 import 'package:compod_app/commons/compod_themes.dart';
 import 'package:compod_app/commons/routes.dart';
 import 'package:compod_app/commons/strings.dart';
-import 'package:compod_app/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
