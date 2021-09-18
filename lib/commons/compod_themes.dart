@@ -36,7 +36,7 @@ class CompodThemes {
     subtitle2: _textStyle.copyWith(letterSpacing: 0.1, fontSize: 14.0, fontWeight: FontWeight.w500),
     bodyText1: _textStyle.copyWith(letterSpacing: 0.5, fontSize: 16.0, fontWeight: FontWeight.w400),
     bodyText2: _textStyle.copyWith(letterSpacing: 0.25, fontSize: 14.0, fontWeight: FontWeight.w400),
-    button: _textStyle.copyWith(letterSpacing: 1.25, fontSize: 16.0, fontWeight: FontWeight.w500),
+    button: _textStyle.copyWith(letterSpacing: 1.25, fontSize: 14.0, fontWeight: FontWeight.w500),
     caption: _textStyle.copyWith(letterSpacing: 0.4, fontSize: 12.0, fontWeight: FontWeight.w400),
     overline: _textStyle.copyWith(letterSpacing: 1.5, fontSize: 10.0, fontWeight: FontWeight.w400),
   );
