@@ -22,7 +22,11 @@ class InternationDescriptionView extends StatelessWidget {
             child: Container(
               width: double.infinity,
               margin: EdgeInsets.all(16),
-              color: Colors.white24,
+              decoration: BoxDecoration(
+                boxShadow: [BoxShadow(color: Colors.black45, blurRadius: 2.0, spreadRadius: 2.0)],
+                borderRadius: BorderRadius.circular(8.0),
+                color: Get.theme.colorScheme.surface,
+              ),
               child: SingleChildScrollView(
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
@@ -35,7 +39,7 @@ class InternationDescriptionView extends StatelessWidget {
               ),
             ),
           ),
-          CompodRaisedButton(action: () {}, buttonText: StringsEnum.continueButton.name.tr),
+          CompodRaisedButton(action: controller.goToFormInput, buttonText: StringsEnum.continueButton.name.tr),
         ],
       ),
     );
