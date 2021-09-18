@@ -1,3 +1,4 @@
+import 'package:compod_app/commons/strings.dart';
 import 'package:compod_app/components/widgets/compod_app_bar.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
 import 'package:compod_app/forms/controller/internation_controller.dart';
@@ -16,10 +17,7 @@ class _InternationFormState extends State<InternationForm> {
 
   InternationController controller = Get.find();
 
-  Widget buildText(String text) {
-    return Container(
-        width: double.infinity, child: Text(text, style: Get.textTheme.bodyText1));
-  }
+  Widget buildText(String text) => Container(width: double.infinity, child: Text(text, style: Get.textTheme.bodyText1));
 
   ListTile buildRadioButton(String text) {
     return ListTile(
@@ -27,11 +25,7 @@ class _InternationFormState extends State<InternationForm> {
       leading: Radio<String>(
         activeColor: Get.theme.colorScheme.secondary,
         value: text,
-        onChanged: (v) {
-          setState(() {
-            controller.sexValue.value = v ?? "";
-          });
-        },
+        onChanged: (v) => setState(() => controller.sexValue.value = v ?? ""),
         groupValue: controller.sexValue.value,
       ),
     );
@@ -40,12 +34,12 @@ class _InternationFormState extends State<InternationForm> {
   @override
   Widget build(BuildContext context) {
     final formsWidget = Container(
-      margin: EdgeInsets.all(12),
-      padding: EdgeInsets.all(12),
+      margin: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
           color: Get.theme.colorScheme.surface,
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
-          boxShadow: [BoxShadow(blurRadius: 5.0, offset: Offset(2, 2))]),
+          borderRadius: const BorderRadius.all(Radius.circular(8.0)),
+          boxShadow: const [BoxShadow(blurRadius: 5.0, offset: Offset(2, 2))]),
       child: Form(
         key: formKey,
         child: Column(
@@ -76,7 +70,7 @@ class _InternationFormState extends State<InternationForm> {
       body: ListView(
         children: [
           Padding(
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16.0),
             child: Text(
               'Preencha o formulário com as informações do paciente',
               textAlign: TextAlign.center,
@@ -84,7 +78,7 @@ class _InternationFormState extends State<InternationForm> {
             ),
           ),
           formsWidget,
-          CompodRaisedButton(buttonText: "Continuar", action: () {}),
+          CompodRaisedButton(buttonText: StringsEnum.sendButton.tr, action: () {}),
         ],
       ),
     );
