@@ -13,12 +13,13 @@ class HomeView extends StatelessWidget {
   final _buttonList = [
     HomeTile(type: HomeTileType.Doctor, text: 'Solicitar atendimento'),
     HomeTile(type: HomeTileType.Heart, text: 'Seja um voluntário'),
+    HomeTile(type: HomeTileType.Anjinho, text: 'Cartilha'),
     HomeTile(type: HomeTileType.Donate, text: 'Doações'),
   ];
 
   @override
   Widget build(BuildContext context) {
-    final _ = Get.put(HomeController());
+    Get.put(HomeController());
 
     final _margin = (MediaQuery.of(context).size.width - 320) / 3;
     final _height = max((_buttonList.length / 2).ceil() * (_margin + 160), (context.height - (6 * 16.0 + 2 * 80)));
