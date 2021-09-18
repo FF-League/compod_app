@@ -7,7 +7,8 @@ import 'package:get/get.dart';
 
 import 'components/internation_tile.dart';
 
-class InternationSelectView extends StatelessWidget {
+class InternationSelectView extends GetView<InternationController> {
+
   final controller = Get.put(InternationController());
 
   @override
