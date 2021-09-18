@@ -5,25 +5,24 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SuccessView extends StatelessWidget {
+
+  static const _imageSize = 130.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.name.tr,),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.fromLTRB(70.0, 50.0, 70.0, 0.0),
-              child: Column(
-                children: [
-                  Image.asset('assets/images/icons/Check.png', height: 150, width: 150),
-                  Text('\n\nObrigado pela inscrição!\n\nRecebemos suas informações com sucesso!\n\nAssim que possível entraremos em contato.', textAlign: TextAlign.center, style: TextStyle(fontSize: 20)),
-                ],
-              ),
-            ),
-          )
-        ],
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image.asset(AppImages.Check, height: _imageSize, width: _imageSize),
+              Text(FormsStringsEnum.successFormsMessage.name.tr, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.white)),
+            ],
+          ),
+        ),
       )
     );
   }
