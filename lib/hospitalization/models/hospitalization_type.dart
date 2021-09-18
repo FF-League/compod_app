@@ -1,5 +1,5 @@
 import 'package:compod_app/commons/compod_images.dart';
-import 'package:compod_app/forms/hospitalization_strings.dart';
+import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:flutter/foundation.dart';
 
 enum HospitalizationType {

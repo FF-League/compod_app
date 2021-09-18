@@ -1,5 +1,5 @@
 import 'package:compod_app/commons/routes.dart';
-import 'package:compod_app/forms/models/hospitalization_type.dart';
+import 'package:compod_app/hospitalization/models/hospitalization_type.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';

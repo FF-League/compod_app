@@ -1,5 +1,5 @@
-import 'package:compod_app/forms/controller/hospitalization_controller.dart';
-import 'package:compod_app/forms/models/hospitalization_type.dart';
+import 'package:compod_app/hospitalization/controller/hospitalization_controller.dart';
+import 'package:compod_app/hospitalization/models/hospitalization_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

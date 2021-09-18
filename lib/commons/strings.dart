@@ -1,4 +1,4 @@
-import 'package:compod_app/forms/hospitalization_strings.dart';
+import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:compod_app/mini_book/mini_book_strings.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';

@@ -1,7 +1,7 @@
-import 'package:compod_app/forms/views/hospitalization_form.dart';
-import 'package:compod_app/forms/views/hospitalization_description_view.dart';
-import 'package:compod_app/forms/views/hospitalization_select_view.dart';
-import 'package:compod_app/forms/views/success_view.dart';
+import 'package:compod_app/hospitalization/views/hospitalization_form.dart';
+import 'package:compod_app/hospitalization/views/hospitalization_description_view.dart';
+import 'package:compod_app/hospitalization/views/hospitalization_select_view.dart';
+import 'package:compod_app/hospitalization/views/success_view.dart';
 import 'package:compod_app/home/view/home_view.dart';
 import 'package:compod_app/mini_book/view/mini_book_view.dart';
 import 'package:flutter/foundation.dart';
