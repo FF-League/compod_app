@@ -1,7 +1,6 @@
 import 'package:compod_app/commons/compod_images.dart';
 import 'package:compod_app/forms/internation_strings.dart';
 import 'package:flutter/foundation.dart';
-import 'package:get/get.dart';
 
 enum InternationType {
   internation,
@@ -23,10 +22,10 @@ extension InternationTypeExt on InternationType {
 
   String get text {
     switch (this) {
-      case InternationType.internation: return FormsStringsEnum.socialAssistance.name.tr;
-      case InternationType.juridical: return FormsStringsEnum.juridical.name.tr;
-      case InternationType.psychology: return FormsStringsEnum.psychologicalTreatment.name.tr;
-      case InternationType.voluntary: return FormsStringsEnum.voluntaryHospitalization.name.tr;
+      case InternationType.internation: return FormsStringsEnum.socialAssistance.tr;
+      case InternationType.juridical: return FormsStringsEnum.juridical.tr;
+      case InternationType.psychology: return FormsStringsEnum.psychologicalTreatment.tr;
+      case InternationType.voluntary: return FormsStringsEnum.voluntaryHospitalization.tr;
     }
   }
 

@@ -13,10 +13,10 @@ class InternationSelectView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.name.tr),
+      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.tr),
       body: ListView(
         children: [
-          Padding(padding: EdgeInsets.all(16), child: Text(FormsStringsEnum.formsSelectViewHeader.name.tr, textAlign: TextAlign.center, style: Get.textTheme.headline4?.copyWith(color: Colors.white))),
+          Padding(padding: EdgeInsets.all(16), child: Text(FormsStringsEnum.formsSelectViewHeader.tr, textAlign: TextAlign.center, style: Get.textTheme.headline4?.copyWith(color: Colors.white))),
           FormsTile(type: InternationType.psychology),
           FormsTile(type: InternationType.internation),
           FormsTile(type: InternationType.juridical),
