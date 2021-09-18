@@ -18,7 +18,7 @@ class SuccessView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset(AppImages.Check, height: _imageSize, width: _imageSize),
+              Image.asset(CompodImages.Check, height: _imageSize, width: _imageSize),
               Text(FormsStringsEnum.successFormsMessage.name.tr, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.white)),
             ],
           ),
