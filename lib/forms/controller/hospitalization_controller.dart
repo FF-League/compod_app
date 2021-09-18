@@ -1,5 +1,6 @@
 import 'package:compod_app/commons/routes.dart';
 import 'package:compod_app/forms/models/hospitalization_type.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
@@ -23,7 +24,9 @@ class HospitalizationController extends GetxController {
     Get.toNamed(RoutesEnum.hospitalization_form.route);
   }
 
-  void goToSuccessView() {
-    Get.toNamed(RoutesEnum.hospitalization_success.route);
+  void goToSuccessView(GlobalKey<FormState> key) {
+    if ((key.currentState?.validate() ?? false) && sexValue.value != '') {
+      Get.toNamed(RoutesEnum.hospitalization_success.route);
+    }
   }
 }

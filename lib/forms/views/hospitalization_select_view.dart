@@ -14,10 +14,10 @@ class HospitalizationSelectView extends GetView<HospitalizationController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.tr),
+      appBar: CompodAppBar(text: HospitalizationStringsEnum.hospitalization.tr),
       body: ListView(
         children: [
-          Padding(padding: EdgeInsets.all(16), child: Text(FormsStringsEnum.formsSelectViewHeader.tr, textAlign: TextAlign.center, style: Get.textTheme.headline4?.copyWith(color: Colors.white))),
+          Padding(padding: EdgeInsets.all(16), child: Text(HospitalizationStringsEnum.formsSelectViewHeader.tr, textAlign: TextAlign.center, style: Get.textTheme.headline4?.copyWith(color: Colors.white))),
           FormsTile(type: HospitalizationType.psychology),
           FormsTile(type: HospitalizationType.hospitalization),
           FormsTile(type: HospitalizationType.juridical),

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 class CompodFormField extends TextFormField {
   CompodFormField({Key? key})
       : super(
+          validator: (value) => (value?.isEmpty ?? true) ? 'Este campo deve ser preenchido' : null,
           key: key,
           style: Get.textTheme.bodyText2,
           cursorColor: Get.theme.colorScheme.secondary,

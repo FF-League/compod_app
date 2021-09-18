@@ -14,7 +14,7 @@ class HospitalizationDescriptionView extends StatelessWidget {
     final HospitalizationController controller = Get.find();
 
     return Scaffold(
-      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.tr),
+      appBar: CompodAppBar(text: HospitalizationStringsEnum.hospitalization.tr),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

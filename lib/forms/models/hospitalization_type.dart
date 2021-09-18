@@ -22,10 +22,10 @@ extension HospitalizationTypeExt on HospitalizationType {
 
   String get text {
     switch (this) {
-      case HospitalizationType.hospitalization: return FormsStringsEnum.socialAssistance.tr;
-      case HospitalizationType.juridical: return FormsStringsEnum.juridical.tr;
-      case HospitalizationType.psychology: return FormsStringsEnum.psychologicalTreatment.tr;
-      case HospitalizationType.voluntary: return FormsStringsEnum.voluntaryHospitalization.tr;
+      case HospitalizationType.hospitalization: return HospitalizationStringsEnum.socialAssistance.tr;
+      case HospitalizationType.juridical: return HospitalizationStringsEnum.juridical.tr;
+      case HospitalizationType.psychology: return HospitalizationStringsEnum.psychologicalTreatment.tr;
+      case HospitalizationType.voluntary: return HospitalizationStringsEnum.voluntaryHospitalization.tr;
     }
   }
 

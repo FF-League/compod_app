@@ -11,7 +11,7 @@ class SuccessView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.tr,),
+      appBar: CompodAppBar(text: HospitalizationStringsEnum.hospitalization.tr,),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -19,7 +19,7 @@ class SuccessView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset(CompodImages.Check, height: _imageSize, width: _imageSize),
-              Text(FormsStringsEnum.successFormsMessage.tr, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.white)),
+              Text(HospitalizationStringsEnum.successFormsMessage.tr, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.white)),
             ],
           ),
         ),
