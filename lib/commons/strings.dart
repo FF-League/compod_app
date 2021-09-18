@@ -13,6 +13,7 @@ class Strings extends Translations {
   static Map<String, String> get commonMaps => {
         StringsEnum.COMPOD.name: "COMPOD",
         StringsEnum.continueButton.name: "Continuar",
+        StringsEnum.returnButton.name: "Retornar",
         StringsEnum.sendButton.name: "Enviar",
       };
 
@@ -23,6 +24,7 @@ class Strings extends Translations {
 enum StringsEnum {
   COMPOD,
   continueButton,
+  returnButton,
   sendButton
 }
 
