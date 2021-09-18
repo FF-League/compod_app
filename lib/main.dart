@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: StringsEnum.COMPOD.tr,
       theme: CompodThemes.theme,
       getPages: Routes.pages,
-      initialRoute: '/',
+      initialRoute: RoutesEnum.home.route,
       home: HomeView(),
     );
   }
