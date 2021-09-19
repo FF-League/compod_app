@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeTile extends StatefulWidget {
-  HomeTile({required this.type, required this.text, Key? key}) : super(key: key);
+  const HomeTile({required this.type, required this.text, Key? key}) : super(key: key);
 
   final HomeTileType type;
   final String text;
