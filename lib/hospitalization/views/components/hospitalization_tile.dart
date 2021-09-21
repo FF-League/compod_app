@@ -1,5 +1,5 @@
-import 'package:compod_app/forms/controller/internation_controller.dart';
-import 'package:compod_app/forms/models/internation_type.dart';
+import 'package:compod_app/hospitalization/controller/hospitalization_controller.dart';
+import 'package:compod_app/hospitalization/models/hospitalization_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,7 +9,7 @@ class FormsTile extends StatefulWidget {
 
   static const _size = 100.0;
   static const _imageSize = 48.0;
-  final InternationType type;
+  final HospitalizationType type;
 
   @override
   _FormsTileState createState() => _FormsTileState();
@@ -21,7 +21,7 @@ class _FormsTileState extends State<FormsTile> {
 
   @override
   Widget build(BuildContext context) {
-  final InternationController controller = Get.find();
+  final HospitalizationController controller = Get.find();
 
     return Container(
       margin: EdgeInsets.all(12.0),
@@ -33,7 +33,7 @@ class _FormsTileState extends State<FormsTile> {
       ),
       height: FormsTile._size,
       child: MaterialButton(
-          onPressed: () => controller.selectInternationType(widget.type),
+          onPressed: () => controller.selectHospitalizationType(widget.type),
           onHighlightChanged: (highlight) => setState(() => _highlighted = highlight),
           child: Padding(
             padding: const EdgeInsets.all(16.0),

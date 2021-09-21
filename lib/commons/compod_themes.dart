@@ -26,17 +26,17 @@ class CompodThemes {
   );
 
   static final _blackTextTheme = TextTheme(
-    headline1: _textStyle.copyWith(letterSpacing: -1.5, fontSize: 96.0, fontWeight: FontWeight.w300, fontFamily: CompodFonts.PalanquinDark),
-    headline2: _textStyle.copyWith(letterSpacing: -0.5, fontSize: 60.0, fontWeight: FontWeight.w300),
-    headline3: _textStyle.copyWith(letterSpacing: 0.0, fontSize: 48.0, fontWeight: FontWeight.w400),
-    headline4: _textStyle.copyWith(letterSpacing: 0.25, fontSize: 34.0, fontWeight: FontWeight.w400, height: 1.0),
-    headline5: _textStyle.copyWith(letterSpacing: 0.0, fontSize: 24.0, fontWeight: FontWeight.w400),
-    headline6: _textStyle.copyWith(letterSpacing: 0.15, fontSize: 34.0, fontWeight: FontWeight.w500),
+    headline1: _textStyle.copyWith(letterSpacing: -1.5, fontSize: 36.0, fontWeight: FontWeight.w300, fontFamily: CompodFonts.PalanquinDark),
+    headline2: _textStyle.copyWith(letterSpacing: -0.5, fontSize: 32.0, fontWeight: FontWeight.w300),
+    headline3: _textStyle.copyWith(letterSpacing: 0.0, fontSize: 28.0, fontWeight: FontWeight.w400),
+    headline4: _textStyle.copyWith(letterSpacing: 0.25, fontSize: 26.0, fontWeight: FontWeight.w400, height: 1.0),
+    headline5: _textStyle.copyWith(letterSpacing: 0.0, fontSize: 22.0, fontWeight: FontWeight.w400),
+    headline6: _textStyle.copyWith(letterSpacing: 0.15, fontSize: 22.0, fontWeight: FontWeight.w500),
     subtitle1: _textStyle.copyWith(letterSpacing: 0.15, fontSize: 16.0, fontWeight: FontWeight.w400),
     subtitle2: _textStyle.copyWith(letterSpacing: 0.1, fontSize: 14.0, fontWeight: FontWeight.w500),
     bodyText1: _textStyle.copyWith(letterSpacing: 0.5, fontSize: 16.0, fontWeight: FontWeight.w400),
     bodyText2: _textStyle.copyWith(letterSpacing: 0.25, fontSize: 14.0, fontWeight: FontWeight.w400),
-    button: _textStyle.copyWith(letterSpacing: 1.25, fontSize: 16.0, fontWeight: FontWeight.w500),
+    button: _textStyle.copyWith(letterSpacing: 1.25, fontSize: 14.0, fontWeight: FontWeight.w500),
     caption: _textStyle.copyWith(letterSpacing: 0.4, fontSize: 12.0, fontWeight: FontWeight.w400),
     overline: _textStyle.copyWith(letterSpacing: 1.5, fontSize: 10.0, fontWeight: FontWeight.w400),
   );

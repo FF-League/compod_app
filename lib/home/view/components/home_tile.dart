@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeTile extends StatefulWidget {
-  HomeTile({required this.type, required this.text, Key? key}) : super(key: key);
+  const HomeTile({required this.type, required this.text, Key? key}) : super(key: key);
 
   final HomeTileType type;
   final String text;
@@ -50,6 +50,7 @@ enum HomeTileType {
   Doctor,
   Heart,
   Donate,
+  Anjinho,
 }
 
 extension on HomeTileType {
@@ -58,6 +59,7 @@ extension on HomeTileType {
       case HomeTileType.Doctor: return CompodImages.Doctor;
       case HomeTileType.Donate: return CompodImages.Donate;
       case HomeTileType.Heart: return CompodImages.Heart;
+      case HomeTileType.Anjinho: return CompodImages.Anjinho;
     }
   }
 }

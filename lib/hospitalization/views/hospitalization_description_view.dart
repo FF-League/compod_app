@@ -1,20 +1,20 @@
 import 'package:compod_app/commons/strings.dart';
 import 'package:compod_app/components/widgets/compod_app_bar.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
-import 'package:compod_app/forms/controller/internation_controller.dart';
-import 'package:compod_app/forms/internation_strings.dart';
+import 'package:compod_app/hospitalization/controller/hospitalization_controller.dart';
+import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class InternationDescriptionView extends StatelessWidget {
-  InternationDescriptionView({Key? key}) : super(key: key);
+class HospitalizationDescriptionView extends StatelessWidget {
+  HospitalizationDescriptionView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final InternationController controller = Get.find();
+    final HospitalizationController controller = Get.find();
 
     return Scaffold(
-      appBar: CompodAppBar(text: FormsStringsEnum.hospitalization.name.tr),
+      appBar: CompodAppBar(text: HospitalizationStringsEnum.hospitalization.tr),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -31,15 +31,15 @@ class InternationDescriptionView extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
                   child: Column(children: [
-                    Obx(() => Text(controller.name.value, style: Get.textTheme.headline5)),
+                    Obx(() => Text(controller.name.value, style: Get.textTheme.headline5, textAlign: TextAlign.center)),
                     SizedBox(height: 24.0),
-                    Obx(() => Text(controller.description.value, style: Get.textTheme.bodyText1)),
+                    Obx(() => Text(controller.description.value, style: Get.textTheme.bodyText2, textAlign: TextAlign.justify)),
                   ]),
                 ),
               ),
             ),
           ),
-          CompodRaisedButton(action: controller.goToFormInput, buttonText: StringsEnum.continueButton.name.tr),
+          CompodRaisedButton(action: controller.goToFormInput, buttonText: StringsEnum.continueButton.tr),
         ],
       ),
     );
