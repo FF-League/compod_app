@@ -11,6 +11,7 @@ class HospitalizationTranslations {
         HospitalizationStringsEnum.voluntaryHospitalization.name: 'Internação Voluntária em\nComunidades Terapêuticas ',
         HospitalizationStringsEnum.formsSelectViewHeader.name: 'Selecione o tipo\nde internação',
         HospitalizationStringsEnum.successFormsMessage.name: 'Obrigado pela inscrição!\n\nRecebemos suas informações com sucesso!\n\nAssim que possível entraremos em contato.',
+        HospitalizationStringsEnum.errorFormsMessage.name: 'Falha ao enviar os dados\nTente novamente mais tarde.',
       };
 }
 
@@ -24,6 +25,7 @@ enum HospitalizationStringsEnum {
   juridical,
   formsSelectViewHeader,
   successFormsMessage,
+  errorFormsMessage,
 }
 
 extension on HospitalizationStringsEnum {
