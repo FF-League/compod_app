@@ -12,7 +12,6 @@ class HospitalizationController extends GetxController {
 
   var description = ''.obs;
   var name = ''.obs;
-  var sexValue = ''.obs;
 
   var form = HospitalizationForm().obs;
 
@@ -24,6 +23,7 @@ class HospitalizationController extends GetxController {
 
   void selectHospitalizationType(HospitalizationType type) {
     setupDescriptionValues(type);
+    form.update((val) => val?.treatment = type);
     Get.toNamed(RoutesEnum.hospitalization_description.route);
   }
 
@@ -32,7 +32,7 @@ class HospitalizationController extends GetxController {
   }
 
   void sendForm(GlobalKey<FormState> key) async {
-    if ((key.currentState?.validate() ?? false) && sexValue.value != '') {
+    if ((key.currentState?.validate() ?? false) && form.value.sex != '') {
       FirebaseFirestore.instance
           .collection(collectionId)
           .add(form.value.toJson)

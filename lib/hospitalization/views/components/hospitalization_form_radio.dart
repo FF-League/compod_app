@@ -14,8 +14,8 @@ class HospitalizationFormRadio extends GetView<HospitalizationController> {
           leading: Radio<String>(
             activeColor: Get.theme.colorScheme.secondary,
             value: data,
-            onChanged: (v) => controller.sexValue.value = v ?? '',
-            groupValue: controller.sexValue.value,
+            onChanged: (v) => controller.form.update((val) => val?.sex = v ?? ''),
+            groupValue: controller.form.value.sex,
           ),
         ));
   }

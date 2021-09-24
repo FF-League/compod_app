@@ -8,7 +8,6 @@ class HospitalizationForm {
   var email = '';
   var age = 0;
   var phone = '';
-  var receivedDate = DateTime.now();
   var sex = '';
   var text = '';
   HospitalizationType? treatment;
@@ -20,10 +19,10 @@ class HospitalizationForm {
   'email' : email,
   'age' : age,
   'phone' : phone,
-  'receivedDate' : receivedDate.toString(),
+  'receivedDate' : DateTime.now().toString(),
   'sex' : sex,
   'text' : text,
-  'treatment' : treatment == null ? null : describeEnum(treatment!),
+  'treatment' : treatment?.text,
   'viewed' : viewed,
   };
 }
