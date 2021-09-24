@@ -13,6 +13,7 @@ class HospitalizationTranslations {
         HospitalizationStringsEnum.successFormsMessage.name: 'Obrigado pela inscrição!\n\nRecebemos suas informações com sucesso!\n\nAssim que possível entraremos em contato.',
         HospitalizationStringsEnum.thisFieldMustBeFilled.name: 'Este campo deve ser preenchido',
         HospitalizationStringsEnum.fillWithPatientInfo.name: 'Preencha o formulário com as informações do paciente',
+        HospitalizationFieldsStringsEnum.name.name: 'Nome',
         HospitalizationFieldsStringsEnum.gender.name: 'Sexo',
         HospitalizationFieldsStringsEnum.address.name: 'Endereço',
         HospitalizationFieldsStringsEnum.male.name: 'Masculino',
@@ -22,6 +23,7 @@ class HospitalizationTranslations {
         HospitalizationFieldsStringsEnum.phoneWithAreaCode.name: 'Telefone com DDD',
         HospitalizationFieldsStringsEnum.job.name: 'Profissão',
         HospitalizationFieldsStringsEnum.email.name: 'E-mail',
+        HospitalizationFieldsStringsEnum.description.name: 'Descreva melhor a situação',
       };
 }
 
@@ -50,6 +52,7 @@ enum HospitalizationFieldsStringsEnum {
   phoneWithAreaCode,
   address,
   job,
+  description,
 }
 
 extension on HospitalizationStringsEnum {

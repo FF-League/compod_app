@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:compod_app/commons/routes.dart';
 import 'package:compod_app/hospitalization/models/hospitalization_form.dart';
 import 'package:compod_app/hospitalization/models/hospitalization_type.dart';
@@ -7,6 +8,8 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class HospitalizationController extends GetxController {
+  static const collectionId = 'forms';
+
   var description = ''.obs;
   var name = ''.obs;
   var sexValue = ''.obs;
@@ -28,11 +31,19 @@ class HospitalizationController extends GetxController {
     Get.toNamed(RoutesEnum.hospitalization_form.route);
   }
 
-  void goToSuccessView(GlobalKey<FormState> key) {
+  void sendForm(GlobalKey<FormState> key) async {
     if ((key.currentState?.validate() ?? false) && sexValue.value != '') {
-      Get.toNamed(RoutesEnum.hospitalization_success.route);
+      FirebaseFirestore.instance
+          .collection(collectionId)
+          .add(form.value.toJson)
+          .then((_) => goToSuccessView())
+          .catchError((_, __) => goToFailureView());
     }
   }
+
+  void goToSuccessView() => Get.toNamed(RoutesEnum.hospitalization_success.route);
+
+  void goToFailureView() => null; // TODO Tela do Julio
 
   void updateFormContent(HospitalizationFormType type, String value) {
     switch (type) {

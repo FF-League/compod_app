@@ -11,6 +11,9 @@ class HospitalizationFormField extends GetView<HospitalizationController> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      minLines: type == HospitalizationFormType.text ? 6 : 1,
+      maxLines: type == HospitalizationFormType.text ? 6 : 1,
+      // expands: type == HospitalizationFormType.text,
       onChanged: (value) => controller.updateFormContent(type, value),
       validator: (value) => (value?.isEmpty ?? true) ? HospitalizationStringsEnum.thisFieldMustBeFilled.tr : null,
       key: key,
