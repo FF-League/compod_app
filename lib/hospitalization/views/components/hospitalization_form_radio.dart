@@ -1,7 +1,8 @@
+import 'package:compod_app/hospitalization/controller/hospitalization_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HospitalizationFormRadio extends GetView {
+class HospitalizationFormRadio extends GetView<HospitalizationController> {
   const HospitalizationFormRadio({required this.data});
 
   final String data;
