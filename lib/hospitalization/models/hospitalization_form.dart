@@ -1,5 +1,4 @@
 import 'package:compod_app/hospitalization/models/hospitalization_type.dart';
-import 'package:flutter/foundation.dart';
 
 class HospitalizationForm {
 
@@ -9,6 +8,7 @@ class HospitalizationForm {
   var age = 0;
   var phone = '';
   var sex = '';
+  var address = '';
   var text = '';
   HospitalizationType? treatment;
   var viewed = false;
@@ -19,6 +19,7 @@ class HospitalizationForm {
   'email' : email,
   'age' : age,
   'phone' : phone,
+  'address' : address,
   'receivedDate' : DateTime.now().toString(),
   'sex' : sex,
   'text' : text,

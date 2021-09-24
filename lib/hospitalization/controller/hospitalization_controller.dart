@@ -66,7 +66,7 @@ class HospitalizationController extends GetxController {
         form.update((val) => val?.job = value);
         break;
       case HospitalizationFormType.address:
-        form.update((val) => val?.job = value);
+        form.update((val) => val?.address = value);
         break;
     }
   }
