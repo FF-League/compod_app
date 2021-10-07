@@ -12,6 +12,19 @@ class HospitalizationTranslations {
         HospitalizationStringsEnum.formsSelectViewHeader.name: 'Selecione o tipo\nde internação',
         HospitalizationStringsEnum.successFormsMessage.name: 'Obrigado pela inscrição!\n\nRecebemos suas informações com sucesso!\n\nAssim que possível entraremos em contato.',
         HospitalizationStringsEnum.errorFormsMessage.name: 'Falha ao enviar os dados\nTente novamente mais tarde.',
+        HospitalizationStringsEnum.thisFieldMustBeFilled.name: 'Este campo deve ser preenchido',
+        HospitalizationStringsEnum.fillWithPatientInfo.name: 'Preencha o formulário com as informações do paciente',
+        HospitalizationFieldsStringsEnum.name.name: 'Nome',
+        HospitalizationFieldsStringsEnum.gender.name: 'Sexo',
+        HospitalizationFieldsStringsEnum.address.name: 'Endereço',
+        HospitalizationFieldsStringsEnum.male.name: 'Masculino',
+        HospitalizationFieldsStringsEnum.female.name: 'Feminino',
+        HospitalizationFieldsStringsEnum.other.name: 'Outro',
+        HospitalizationFieldsStringsEnum.age.name: 'Idade',
+        HospitalizationFieldsStringsEnum.phoneWithAreaCode.name: 'Telefone com DDD',
+        HospitalizationFieldsStringsEnum.job.name: 'Profissão',
+        HospitalizationFieldsStringsEnum.email.name: 'E-mail',
+        HospitalizationFieldsStringsEnum.description.name: 'Descreva melhor a situação',
       };
 }
 
@@ -26,6 +39,22 @@ enum HospitalizationStringsEnum {
   formsSelectViewHeader,
   successFormsMessage,
   errorFormsMessage,
+  thisFieldMustBeFilled,
+  fillWithPatientInfo,
+}
+
+enum HospitalizationFieldsStringsEnum {
+  name,
+  age,
+  gender,
+  male,
+  female,
+  other,
+  email,
+  phoneWithAreaCode,
+  address,
+  job,
+  description,
 }
 
 extension on HospitalizationStringsEnum {
@@ -33,5 +62,13 @@ extension on HospitalizationStringsEnum {
 }
 
 extension HospitalizationStringsEnumExt on HospitalizationStringsEnum {
+  String get tr => name.tr;
+}
+
+extension on HospitalizationFieldsStringsEnum {
+  String get name => this.toString();
+}
+
+extension HospitalizationFieldsStringsEnumExt on HospitalizationFieldsStringsEnum {
   String get tr => name.tr;
 }

@@ -3,27 +3,15 @@ import 'package:compod_app/components/widgets/compod_app_bar.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
 import 'package:compod_app/hospitalization/controller/hospitalization_controller.dart';
 import 'package:compod_app/hospitalization/hospitalization_strings.dart';
+import 'package:compod_app/hospitalization/views/components/hospitalization_form_radio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'components/compod_form_field.dart';
+import 'components/hospitalization_form_field.dart';
+import 'components/hospitalization_form_text.dart';
 
 class HospitalizationForm extends GetView<HospitalizationController> {
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
-
-  Widget buildText(String text) => Container(width: double.infinity, child: Text(text, style: Get.textTheme.bodyText1));
-
-  Widget buildRadioButton(String text) {
-    return Obx(() => ListTile(
-          title: Text(text, style: Get.textTheme.bodyText1),
-          leading: Radio<String>(
-            activeColor: Get.theme.colorScheme.secondary,
-            value: text,
-            onChanged: (v) => controller.sexValue.value = v ?? '',
-            groupValue: controller.sexValue.value,
-          ),
-        ));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +22,7 @@ class HospitalizationForm extends GetView<HospitalizationController> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              'Preencha o formulário com as informações do paciente',
+              HospitalizationStringsEnum.fillWithPatientInfo.tr,
               textAlign: TextAlign.center,
               style: Get.textTheme.headline4?.copyWith(color: Colors.white),
             ),
@@ -51,27 +39,29 @@ class HospitalizationForm extends GetView<HospitalizationController> {
               key: formKey,
               child: Column(
                 children: [
-                  buildText("Nome"),
-                  CompodFormField(),
-                  buildText("Idade"),
-                  CompodFormField(),
-                  buildText("Sexo"),
-                  buildRadioButton("Masculino"),
-                  buildRadioButton("Feminino"),
-                  buildRadioButton("Outro"),
-                  buildText("Profissão"),
-                  CompodFormField(),
-                  buildText("Endereço"),
-                  CompodFormField(),
-                  buildText("Telefone com DDD"),
-                  CompodFormField(),
-                  buildText("E-mail"),
-                  CompodFormField(),
+                  HospitalizationFormText(data: HospitalizationFieldsStringsEnum.name.tr),
+                  HospitalizationFormField(type: HospitalizationFormType.name),
+                  HospitalizationFormText(data: HospitalizationFieldsStringsEnum.age.tr),
+                  HospitalizationFormField(type: HospitalizationFormType.age),
+                  HospitalizationFormText(data: HospitalizationFieldsStringsEnum.gender.tr),
+                  HospitalizationFormRadio(data: HospitalizationFieldsStringsEnum.male.tr),
+                  HospitalizationFormRadio(data: HospitalizationFieldsStringsEnum.female.tr),
+                  HospitalizationFormRadio(data: HospitalizationFieldsStringsEnum.other.tr),
+                  HospitalizationFormText(data: HospitalizationFieldsStringsEnum.job.tr),
+                  HospitalizationFormField(type: HospitalizationFormType.job),
+                  HospitalizationFormText(data: HospitalizationFieldsStringsEnum.address.tr),
+                  HospitalizationFormField(type: HospitalizationFormType.address),
+                  HospitalizationFormText(data: HospitalizationFieldsStringsEnum.phoneWithAreaCode.tr),
+                  HospitalizationFormField(type: HospitalizationFormType.phone),
+                  HospitalizationFormText(data: HospitalizationFieldsStringsEnum.email.tr),
+                  HospitalizationFormField(type: HospitalizationFormType.email),
+                  HospitalizationFormText(data: HospitalizationFieldsStringsEnum.description.tr),
+                  HospitalizationFormField(type: HospitalizationFormType.text),
                 ],
               ),
             ),
           ),
-          CompodRaisedButton(buttonText: StringsEnum.sendButton.tr, action: () => controller.goToSuccessView(formKey)),
+          CompodRaisedButton(buttonText: StringsEnum.sendButton.tr, action: () => controller.sendForm(formKey)),
         ],
       ),
     );

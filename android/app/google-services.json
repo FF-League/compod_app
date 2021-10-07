@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "639844899668",
+    "firebase_url": "https://compod-osasco-default-rtdb.firebaseio.com",
+    "project_id": "compod-osasco",
+    "storage_bucket": "compod-osasco.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639844899668:android:e6a2eb50e498ea258ec6c1",
+        "android_client_info": {
+          "package_name": "com.compodosasco.compod_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639844899668-7d8v7edogu8nvd4p14gq416l5t9adile.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi1GCWVrh5XWepj3ozE8kFbitUBKXruSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639844899668-7d8v7edogu8nvd4p14gq416l5t9adile.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
