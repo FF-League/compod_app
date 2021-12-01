@@ -1,15 +1,10 @@
 # compod_app
 
-A new Flutter project.
+### Mobile App made in Flutter for [COMPOD Osasco](https://compodosasco.com)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+The only thing you'll need to run this project is a [Flutter](https://flutter.dev) environment.
 
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
