@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HospitalizationFormField extends GetView<HospitalizationController> {
-  final HospitalizationFormType type;
-
   const HospitalizationFormField({Key? key, required this.type});
+
+  final HospitalizationFormType type;
 
   TextInputType get _keyboardType {
     switch (type) {

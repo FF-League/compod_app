@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MiniBookView extends GetView<MiniBookController> {
-  final MiniBookController controller = Get.put(MiniBookController());
+  @override
+  final controller = Get.put(MiniBookController());
 
   @override
   Widget build(BuildContext context) {

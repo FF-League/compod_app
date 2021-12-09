@@ -11,9 +11,9 @@ class Strings extends Translations {
       };
 
   static Map<String, String> get commonMaps => {
-        StringsEnum.COMPOD.name: "COMPOD",
-        StringsEnum.continueButton.name: "Continuar",
-        StringsEnum.sendButton.name: "Enviar",
+        StringsEnum.compod.name: 'COMPOD',
+        StringsEnum.continueButton.name: 'Continuar',
+        StringsEnum.sendButton.name: 'Enviar',
       };
 
   @override
@@ -21,7 +21,7 @@ class Strings extends Translations {
 }
 
 enum StringsEnum {
-  COMPOD,
+  compod,
   continueButton,
   sendButton
 }

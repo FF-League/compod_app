@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       translations: Strings(),
       locale: Locale('pt', 'BR'),
-      title: StringsEnum.COMPOD.tr,
+      title: StringsEnum.compod.tr,
       theme: CompodThemes.theme,
       getPages: Routes.pages,
       initialRoute: RoutesEnum.home.route,

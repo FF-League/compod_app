@@ -11,10 +11,10 @@ class HomeView extends GetResponsiveView {
   HomeView({Key? key}) : super(key: key);
 
   static const _buttonList = [
-    HomeTile(type: HomeTileType.Doctor, text: 'Solicitar atendimento'),
-    HomeTile(type: HomeTileType.Heart, text: 'Seja um voluntário'),
-    HomeTile(type: HomeTileType.Anjinho, text: 'Cartilha'),
-    HomeTile(type: HomeTileType.Donate, text: 'Doações'),
+    HomeTile(type: HomeTileType.doctor, text: 'Solicitar atendimento'),
+    HomeTile(type: HomeTileType.heart, text: 'Seja um voluntário'),
+    HomeTile(type: HomeTileType.anjinho, text: 'Cartilha'),
+    HomeTile(type: HomeTileType.donate, text: 'Doações'),
   ];
 
   @override
@@ -27,9 +27,9 @@ class HomeView extends GetResponsiveView {
     return Scaffold(
       body: ListView(
         children: [
-          Padding(child: Image.asset(CompodImages.WhiteLogo, height: 80), padding: EdgeInsets.all(padding)),
+          Padding(child: Image.asset(CompodImages.whiteLogo, height: 80), padding: EdgeInsets.all(padding)),
           SizedBox(height: height, child: HomeTileGrid(margin: margin, buttonList: _buttonList)),
-          Padding(child: Image.asset(CompodImages.OsascoLogo, height: 80), padding: EdgeInsets.all(padding)),
+          Padding(child: Image.asset(CompodImages.osascoLogo, height: 80), padding: EdgeInsets.all(padding)),
         ],
       ),
     );

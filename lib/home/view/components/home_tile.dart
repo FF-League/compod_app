@@ -47,19 +47,19 @@ class _HomeTileState extends State<HomeTile> {
 }
 
 enum HomeTileType {
-  Doctor,
-  Heart,
-  Donate,
-  Anjinho,
+  doctor,
+  heart,
+  donate,
+  anjinho,
 }
 
 extension on HomeTileType {
   String get image {
     switch (this) {
-      case HomeTileType.Doctor: return CompodImages.Doctor;
-      case HomeTileType.Donate: return CompodImages.Donate;
-      case HomeTileType.Heart: return CompodImages.Heart;
-      case HomeTileType.Anjinho: return CompodImages.Anjinho;
+      case HomeTileType.doctor: return CompodImages.doctor;
+      case HomeTileType.donate: return CompodImages.donate;
+      case HomeTileType.heart: return CompodImages.heart;
+      case HomeTileType.anjinho: return CompodImages.anjinho;
     }
   }
 }

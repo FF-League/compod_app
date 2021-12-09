@@ -9,6 +9,7 @@ import 'components/hospitalization_tile.dart';
 
 class HospitalizationSelectView extends GetView<HospitalizationController> {
 
+  @override
   final controller = Get.put(HospitalizationController());
 
   @override

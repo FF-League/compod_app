@@ -1,8 +1,8 @@
 class CompodFonts {
 
-  static const PalanquinDark        = 'Palanquin-Dark';
-  static const Palanquin            = 'Palanquin';
-
   CompodFonts._();
+
+  static const palanquinDark        = 'Palanquin-Dark';
+  static const palanquin            = 'Palanquin';
 
 }

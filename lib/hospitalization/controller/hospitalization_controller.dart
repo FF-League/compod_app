@@ -24,11 +24,11 @@ class HospitalizationController extends GetxController {
   void selectHospitalizationType(HospitalizationType type) {
     setupDescriptionValues(type);
     form.update((val) => val?.treatment = type);
-    Get.toNamed(RoutesEnum.hospitalization_description.route);
+    Get.toNamed(RoutesEnum.hospitalizationDescription.route);
   }
 
   void goToFormInput() {
-    Get.toNamed(RoutesEnum.hospitalization_form.route);
+    Get.toNamed(RoutesEnum.hospitalizationForm.route);
   }
 
   void sendForm(GlobalKey<FormState> key) async {
@@ -41,8 +41,9 @@ class HospitalizationController extends GetxController {
     }
   }
 
-  void goToSuccessView() => Get.toNamed(RoutesEnum.hospitalization_success.route);
+  void goToSuccessView() => Get.toNamed(RoutesEnum.hospitalizationSuccess.route);
 
+  // ignore: avoid_returning_null_for_void
   void goToFailureView() => null; // TODO Tela do Julio
 
   void updateFormContent(HospitalizationFormType type, String value) {
