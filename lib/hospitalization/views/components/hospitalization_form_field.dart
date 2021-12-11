@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HospitalizationFormField extends GetView<HospitalizationController> {
-  const HospitalizationFormField({Key? key, required this.type});
+  const HospitalizationFormField({Key? key, required this.type}) : super(key: key);
 
   final HospitalizationFormType type;
 
@@ -34,7 +34,7 @@ class HospitalizationFormField extends GetView<HospitalizationController> {
           borderRadius: BorderRadius.circular(8.0),
           borderSide: BorderSide(color: Get.theme.colorScheme.secondary),
         ),
-        contentPadding: EdgeInsets.symmetric(horizontal: 12.0),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 12.0),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
         fillColor: Colors.blueGrey.shade50,
         filled: true,

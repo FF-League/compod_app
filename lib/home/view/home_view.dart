@@ -22,14 +22,14 @@ class HomeView extends GetResponsiveView {
     Get.put(HomeController());
 
     final margin = (context.width - 320) / 3;
-    final padding = 16.0;
+    const padding = 16.0;
     final height = max((_buttonList.length / 2).ceil() * (margin + 160), (context.height - (6 * padding + 2 * 80)));
     return Scaffold(
       body: ListView(
         children: [
-          Padding(child: Image.asset(CompodImages.whiteLogo, height: 80), padding: EdgeInsets.all(padding)),
+          Padding(child: Image.asset(CompodImages.whiteLogo, height: 80), padding: const EdgeInsets.all(padding)),
           SizedBox(height: height, child: HomeTileGrid(margin: margin, buttonList: _buttonList)),
-          Padding(child: Image.asset(CompodImages.osascoLogo, height: 80), padding: EdgeInsets.all(padding)),
+          Padding(child: Image.asset(CompodImages.osascoLogo, height: 80), padding: const EdgeInsets.all(padding)),
         ],
       ),
     );

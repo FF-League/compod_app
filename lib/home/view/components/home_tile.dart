@@ -24,10 +24,10 @@ class _HomeTileState extends State<HomeTile> {
 
     return Container(
       decoration: BoxDecoration(
-        boxShadow: [BoxShadow(color: Colors.black45, blurRadius: 2, spreadRadius: 2, offset: Offset(0, 2))],
+        boxShadow: const [BoxShadow(color: Colors.black45, blurRadius: 2, spreadRadius: 2, offset: Offset(0, 2))],
         border: Border.all(color: _highlighted ? Get.theme.colorScheme.secondaryVariant.withOpacity(0.6) : Colors.white.withOpacity(0.6), width: 2),
         borderRadius: BorderRadius.circular(5),
-        gradient: LinearGradient(begin: Alignment(0, 0.4), end: Alignment.bottomCenter, colors: [Get.theme.primaryColor, Get.theme.primaryColorDark]),
+        gradient: LinearGradient(begin: const Alignment(0, 0.4), end: Alignment.bottomCenter, colors: [Get.theme.primaryColor, Get.theme.primaryColorDark]),
       ),
       width: HomeTile.size,
       height: HomeTile.size,
@@ -36,7 +36,7 @@ class _HomeTileState extends State<HomeTile> {
         onHighlightChanged: (highlight) => setState(() => _highlighted = highlight),
         child: Column(
           children: [
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
             Image.asset(widget.type.image, width: HomeTile.imageSize, height: HomeTile.imageSize),
             Expanded(child: Center(child: Text(widget.text.toUpperCase(), textAlign: TextAlign.center, style: Get.textTheme.button?.copyWith(height: 1.5))))
           ],

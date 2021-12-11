@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 import 'components/hospitalization_tile.dart';
 
 class HospitalizationSelectView extends GetView<HospitalizationController> {
+  HospitalizationSelectView({Key? key}) : super(key: key);
 
   @override
   final controller = Get.put(HospitalizationController());
@@ -18,11 +19,11 @@ class HospitalizationSelectView extends GetView<HospitalizationController> {
       appBar: CompodAppBar(text: HospitalizationStringsEnum.hospitalization.tr),
       body: ListView(
         children: [
-          Padding(padding: EdgeInsets.all(16), child: Text(HospitalizationStringsEnum.formsSelectViewHeader.tr, textAlign: TextAlign.center, style: Get.textTheme.headline4?.copyWith(color: Colors.white))),
-          FormsTile(type: HospitalizationType.psychology),
-          FormsTile(type: HospitalizationType.hospitalization),
-          FormsTile(type: HospitalizationType.juridical),
-          FormsTile(type: HospitalizationType.voluntary),
+          Padding(padding: const EdgeInsets.all(16), child: Text(HospitalizationStringsEnum.formsSelectViewHeader.tr, textAlign: TextAlign.center, style: Get.textTheme.headline4?.copyWith(color: Colors.white))),
+          const FormsTile(type: HospitalizationType.psychology),
+          const FormsTile(type: HospitalizationType.hospitalization),
+          const FormsTile(type: HospitalizationType.juridical),
+          const FormsTile(type: HospitalizationType.voluntary),
         ],
       ),
     );

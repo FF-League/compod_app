@@ -1,4 +1,4 @@
-include: package:lints/recommended.yaml
+include: package:flutter_lints/flutter.yaml
 
 linter:
   rules:
@@ -19,4 +19,8 @@ linter:
 
     # The new tabs vs. spaces. Choose wisely
     prefer_single_quotes: true
+
+    join_return_with_assignment: true
+
+    avoid_type_to_string: true
 

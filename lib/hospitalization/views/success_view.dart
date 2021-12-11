@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SuccessView extends StatelessWidget {
+  const SuccessView({Key? key}) : super(key: key);
 
   static const _imageSize = 130.0;
 
