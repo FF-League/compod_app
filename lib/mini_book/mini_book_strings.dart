@@ -12,7 +12,7 @@ enum MiniBookStringsEnum {
 }
 
 extension on MiniBookStringsEnum {
-  String get name => this.toString();
+  String get name => toString();
 
 }
 

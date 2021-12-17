@@ -56,7 +56,7 @@ enum HospitalizationFieldsStringsEnum {
 }
 
 extension on HospitalizationStringsEnum {
-  String get name => this.toString();
+  String get name => toString();
 }
 
 extension HospitalizationStringsEnumExt on HospitalizationStringsEnum {
@@ -64,7 +64,7 @@ extension HospitalizationStringsEnumExt on HospitalizationStringsEnum {
 }
 
 extension on HospitalizationFieldsStringsEnum {
-  String get name => this.toString();
+  String get name => toString();
 }
 
 extension HospitalizationFieldsStringsEnumExt on HospitalizationFieldsStringsEnum {

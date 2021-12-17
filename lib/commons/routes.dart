@@ -11,9 +11,9 @@ class Routes {
 
   static final pages = [
     GetPage(name: RoutesEnum.hospitalization.route, page: () => HospitalizationSelectView()),
-    GetPage(name: RoutesEnum.hospitalization_form.route, page: () => HospitalizationForm()),
-    GetPage(name: RoutesEnum.hospitalization_description.route, page: () => HospitalizationDescriptionView()),
-    GetPage(name: RoutesEnum.hospitalization_success.route, page: () => SuccessView()),
+    GetPage(name: RoutesEnum.hospitalizationForm.route, page: () => HospitalizationForm()),
+    GetPage(name: RoutesEnum.hospitalizationDescription.route, page: () => const HospitalizationDescriptionView()),
+    GetPage(name: RoutesEnum.hospitalizationSuccess.route, page: () => const SuccessView()),
     GetPage(name: RoutesEnum.minibook.route, page: () => MiniBookView()),
     GetPage(name: RoutesEnum.home.route, page: () => HomeView()),
   ];
@@ -21,9 +21,9 @@ class Routes {
 
 enum RoutesEnum {
   hospitalization,
-  hospitalization_success,
-  hospitalization_form,
-  hospitalization_description,
+  hospitalizationSuccess,
+  hospitalizationForm,
+  hospitalizationDescription,
   minibook,
   home,
 }

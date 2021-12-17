@@ -19,7 +19,7 @@ class CompodRaisedButton extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              this.buttonText.toUpperCase(),
+              buttonText.toUpperCase(),
               style: Get.textTheme.button
             ),
           ),

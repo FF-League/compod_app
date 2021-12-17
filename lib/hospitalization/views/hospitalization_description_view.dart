@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HospitalizationDescriptionView extends StatelessWidget {
-  HospitalizationDescriptionView({Key? key}) : super(key: key);
+  const HospitalizationDescriptionView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +21,18 @@ class HospitalizationDescriptionView extends StatelessWidget {
           Expanded(
             child: Container(
               width: double.infinity,
-              margin: EdgeInsets.all(16),
+              margin: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                boxShadow: [BoxShadow(color: Colors.black45, blurRadius: 2.0, spreadRadius: 2.0)],
+                boxShadow: const [BoxShadow(color: Colors.black45, blurRadius: 2.0, spreadRadius: 2.0)],
                 borderRadius: BorderRadius.circular(8.0),
                 color: Get.theme.colorScheme.surface,
               ),
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
                   child: Column(children: [
                     Obx(() => Text(controller.name.value, style: Get.textTheme.headline5, textAlign: TextAlign.center)),
-                    SizedBox(height: 24.0),
+                    const SizedBox(height: 24.0),
                     Obx(() => Text(controller.description.value, style: Get.textTheme.bodyText2, textAlign: TextAlign.justify)),
                   ]),
                 ),

@@ -5,9 +5,9 @@ import 'package:get/get.dart';
 class HomeController extends GetxController {
   void tileAction(HomeTileType type) {
     switch (type) {
-      case HomeTileType.Doctor: Get.toNamed(RoutesEnum.hospitalization.route);
+      case HomeTileType.doctor: Get.toNamed(RoutesEnum.hospitalization.route);
         return;
-      case HomeTileType.Anjinho: Get.toNamed(RoutesEnum.minibook.route);
+      case HomeTileType.anjinho: Get.toNamed(RoutesEnum.minibook.route);
         return;
       default: return;
     }

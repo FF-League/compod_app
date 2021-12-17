@@ -13,10 +13,10 @@ extension HospitalizationTypeExt on HospitalizationType {
 
   String get image {
     switch (this) {
-      case HospitalizationType.hospitalization: return CompodImages.Psycho;
-      case HospitalizationType.juridical: return CompodImages.Hospital;
-      case HospitalizationType.psychology: return CompodImages.Judge;
-      case HospitalizationType.voluntary: return CompodImages.Volunteer;
+      case HospitalizationType.hospitalization: return CompodImages.psycho;
+      case HospitalizationType.juridical: return CompodImages.hospital;
+      case HospitalizationType.psychology: return CompodImages.judge;
+      case HospitalizationType.voluntary: return CompodImages.volunteer;
     }
   }
 

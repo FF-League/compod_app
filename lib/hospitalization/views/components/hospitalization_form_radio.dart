@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HospitalizationFormRadio extends GetView<HospitalizationController> {
-  const HospitalizationFormRadio({required this.data});
+  const HospitalizationFormRadio({Key? key, required this.data}): super(key: key);
 
   final String data;
 
