@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MiniBookButton extends GetView<MiniBookController> {
-  MiniBookButton({required this.type, Key? key});
+  const MiniBookButton({Key? key, required this.type}) : super(key: key);
 
   final MiniBookButtonType type;
 
@@ -14,12 +14,10 @@ class MiniBookButton extends GetView<MiniBookController> {
           disabledColor: Colors.grey,
           color: Get.theme.colorScheme.secondaryVariant,
           onPressed: type == MiniBookButtonType.next ? (controller.isNextButtonEnabled ? controller.goToNextPage : null) : (controller.isPreviousButtonEnabled ? controller.goToPreviousPage : null),
-          shape: CircleBorder(),
-          child: Container(
-            child: Icon(
-              type == MiniBookButtonType.next ? Icons.arrow_forward_rounded : Icons.arrow_back_rounded,
-              size: 24.0,
-            ),
+          shape: const CircleBorder(),
+          child: Icon(
+            type == MiniBookButtonType.next ? Icons.arrow_forward_rounded : Icons.arrow_back_rounded,
+            size: 24.0,
           ),
         ));
   }

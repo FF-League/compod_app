@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SuccessView extends StatelessWidget {
+  const SuccessView({Key? key}) : super(key: key);
 
   static const _imageSize = 130.0;
 
@@ -18,7 +19,7 @@ class SuccessView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset(CompodImages.Check, height: _imageSize, width: _imageSize),
+              Image.asset(CompodImages.check, height: _imageSize, width: _imageSize),
               Text(HospitalizationStringsEnum.successFormsMessage.tr, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.white)),
             ],
           ),

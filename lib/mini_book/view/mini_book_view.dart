@@ -6,7 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MiniBookView extends GetView<MiniBookController> {
-  final MiniBookController controller = Get.put(MiniBookController());
+  MiniBookView({Key? key}) : super(key: key);
+
+  @override
+  final controller = Get.put(MiniBookController());
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +24,9 @@ class MiniBookView extends GetView<MiniBookController> {
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              MiniBookButton(type: MiniBookButtonType.previous),
+              const MiniBookButton(type: MiniBookButtonType.previous),
               Obx(() => Text('Página ${controller.currentPage}/${controller.pdfDocument.value?.pagesCount ?? 0}', style: Get.textTheme.subtitle1?.copyWith(color: Colors.white))),
-              MiniBookButton(type: MiniBookButtonType.next),
+              const MiniBookButton(type: MiniBookButtonType.next),
             ],
           ),
         ],
@@ -35,8 +38,8 @@ class MiniBookView extends GetView<MiniBookController> {
           child: Center(
             child: Container(
               color: Colors.white,
-              margin: EdgeInsets.all(12.0),
-              child: controller.currentPageBytes.value == null ? CircularProgressIndicator() : Image(image: MemoryImage(controller.currentPageBytes.value!)),
+              margin: const EdgeInsets.all(12.0),
+              child: controller.currentPageBytes.value == null ? const CircularProgressIndicator() : Image(image: MemoryImage(controller.currentPageBytes.value!)),
             ),
           ),
         ),

@@ -11,6 +11,8 @@ import 'components/hospitalization_form_field.dart';
 import 'components/hospitalization_form_text.dart';
 
 class HospitalizationForm extends GetView<HospitalizationController> {
+  HospitalizationForm({Key? key}) : super(key: key);
+
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   @override
@@ -40,23 +42,23 @@ class HospitalizationForm extends GetView<HospitalizationController> {
               child: Column(
                 children: [
                   HospitalizationFormText(data: HospitalizationFieldsStringsEnum.name.tr),
-                  HospitalizationFormField(type: HospitalizationFormType.name),
+                  const HospitalizationFormField(type: HospitalizationFormType.name),
                   HospitalizationFormText(data: HospitalizationFieldsStringsEnum.age.tr),
-                  HospitalizationFormField(type: HospitalizationFormType.age),
+                  const HospitalizationFormField(type: HospitalizationFormType.age),
                   HospitalizationFormText(data: HospitalizationFieldsStringsEnum.gender.tr),
                   HospitalizationFormRadio(data: HospitalizationFieldsStringsEnum.male.tr),
                   HospitalizationFormRadio(data: HospitalizationFieldsStringsEnum.female.tr),
                   HospitalizationFormRadio(data: HospitalizationFieldsStringsEnum.other.tr),
                   HospitalizationFormText(data: HospitalizationFieldsStringsEnum.job.tr),
-                  HospitalizationFormField(type: HospitalizationFormType.job),
+                  const HospitalizationFormField(type: HospitalizationFormType.job),
                   HospitalizationFormText(data: HospitalizationFieldsStringsEnum.address.tr),
-                  HospitalizationFormField(type: HospitalizationFormType.address),
+                  const HospitalizationFormField(type: HospitalizationFormType.address),
                   HospitalizationFormText(data: HospitalizationFieldsStringsEnum.phoneWithAreaCode.tr),
-                  HospitalizationFormField(type: HospitalizationFormType.phone),
+                  const HospitalizationFormField(type: HospitalizationFormType.phone),
                   HospitalizationFormText(data: HospitalizationFieldsStringsEnum.email.tr),
-                  HospitalizationFormField(type: HospitalizationFormType.email),
+                  const HospitalizationFormField(type: HospitalizationFormType.email),
                   HospitalizationFormText(data: HospitalizationFieldsStringsEnum.description.tr),
-                  HospitalizationFormField(type: HospitalizationFormType.text),
+                  const HospitalizationFormField(type: HospitalizationFormType.text),
                 ],
               ),
             ),

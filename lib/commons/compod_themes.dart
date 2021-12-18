@@ -26,7 +26,7 @@ class CompodThemes {
   );
 
   static final _blackTextTheme = TextTheme(
-    headline1: _textStyle.copyWith(letterSpacing: -1.5, fontSize: 36.0, fontWeight: FontWeight.w300, fontFamily: CompodFonts.PalanquinDark),
+    headline1: _textStyle.copyWith(letterSpacing: -1.5, fontSize: 36.0, fontWeight: FontWeight.w300, fontFamily: CompodFonts.palanquinDark),
     headline2: _textStyle.copyWith(letterSpacing: -0.5, fontSize: 32.0, fontWeight: FontWeight.w300),
     headline3: _textStyle.copyWith(letterSpacing: 0.0, fontSize: 28.0, fontWeight: FontWeight.w400),
     headline4: _textStyle.copyWith(letterSpacing: 0.25, fontSize: 26.0, fontWeight: FontWeight.w400, height: 1.0),
@@ -43,7 +43,7 @@ class CompodThemes {
 
   static const _textStyle = TextStyle(
     color: Colors.black,
-    fontFamily: CompodFonts.Palanquin,
+    fontFamily: CompodFonts.palanquin,
   );
 
 }

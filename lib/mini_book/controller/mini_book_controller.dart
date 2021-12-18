@@ -25,7 +25,6 @@ class MiniBookController extends GetxController {
   }
 
   Future<void> getPage(int pageNumber) async {
-    print(pageNumber);
     pdfDocument.value = await PdfDocument.openAsset('assets/pdf/mini_book.pdf');
     final pdfPage = await pdfDocument.value!.getPage(currentPage.value);
     final pageImage = await pdfPage.render(width: pdfPage.width, height: pdfPage.height);
