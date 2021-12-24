@@ -13,8 +13,7 @@ class MiniBookView extends GetView<MiniBookController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
+    return CompodScaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -25,13 +24,22 @@ class MiniBookView extends GetView<MiniBookController> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               const MiniBookButton(type: MiniBookButtonType.previous),
-              Obx(() => Text('Página ${controller.currentPage}/${controller.pdfDocument.value?.pagesCount ?? 0}', style: Get.textTheme.subtitle1?.copyWith(color: Colors.white))),
+              Container(
+                color: Colors.black38,
+                child: Obx(
+                  () => Text(
+                    ' Página ${controller.currentPage}/${controller.pdfDocument.value?.pagesCount ?? 0} ',
+                    style:
+                        Get.textTheme.subtitle1?.copyWith(color: Colors.white),
+                  ),
+                ),
+              ),
               const MiniBookButton(type: MiniBookButtonType.next),
             ],
           ),
         ],
       ),
-      appBar: CompodAppBar(text: MiniBookStringsEnum.name.tr),
+      appBarTitle: MiniBookStringsEnum.name.tr,
       body: Obx(
         () => InteractiveViewer(
           maxScale: 3.0,
@@ -39,11 +47,18 @@ class MiniBookView extends GetView<MiniBookController> {
             child: Container(
               color: Colors.white,
               margin: const EdgeInsets.all(12.0),
-              child: controller.currentPageBytes.value == null ? const CircularProgressIndicator() : Image(image: MemoryImage(controller.currentPageBytes.value!)),
+              child: pageContent,
             ),
           ),
         ),
       ),
     );
+  }
+
+  Widget get pageContent {
+    final content = controller.currentPageBytes.value;
+    return content != null
+        ? Image(image: MemoryImage(content))
+        : const CircularProgressIndicator();
   }
 }
