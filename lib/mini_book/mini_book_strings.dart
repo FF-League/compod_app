@@ -11,11 +11,6 @@ enum MiniBookStringsEnum {
   name,
 }
 
-extension on MiniBookStringsEnum {
-  String get name => toString();
-
-}
-
 extension MiniBookStringsEnumExt on MiniBookStringsEnum {
   String get tr => name.tr;
 

@@ -1,4 +1,4 @@
-import 'package:compod_app/components/widgets/compod_app_bar.dart';
+import 'package:compod_app/components/widgets/compod_scaffold.dart';
 import 'package:compod_app/mini_book/components/mini_book_button.dart';
 import 'package:compod_app/mini_book/controller/mini_book_controller.dart';
 import 'package:compod_app/mini_book/mini_book_strings.dart';
