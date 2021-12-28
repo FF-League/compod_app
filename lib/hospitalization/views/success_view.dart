@@ -19,8 +19,8 @@ class SuccessView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset(CompodImages.check, height: _imageSize, width: _imageSize),
-              Text(HospitalizationStringsEnum.successFormsMessage.tr, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.white)),
+              Image.asset(CompodImages.checkBlack, height: _imageSize, width: _imageSize),
+              Text(HospitalizationStringsEnum.successFormsMessage.tr, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.black)),
             ],
           ),
         ),
