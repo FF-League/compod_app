@@ -10,7 +10,7 @@ class HospitalizationTranslations {
         HospitalizationStringsEnum.juridical.name: 'Jurídico',
         HospitalizationStringsEnum.voluntaryHospitalization.name: 'Internação Voluntária em\nComunidades Terapêuticas ',
         HospitalizationStringsEnum.formsSelectViewHeader.name: 'Selecione o tipo\nde internação',
-        HospitalizationStringsEnum.successFormsMessage.name: 'Obrigado pela inscrição!\n\nRecebemos suas informações com sucesso!\n\nAssim que possível entraremos em contato.',
+    HospitalizationStringsEnum.successFormsMessage.name: 'Obrigado pela inscrição!\n\nRecebemos suas informações com sucesso!\n\nAssim que possível entraremos em contato com você.',
         HospitalizationStringsEnum.thisFieldMustBeFilled.name: 'Este campo deve ser preenchido',
         HospitalizationStringsEnum.fillWithPatientInfo.name: 'Preencha o formulário com as informações do paciente',
         HospitalizationFieldsStringsEnum.name.name: 'Nome',
