@@ -20,7 +20,7 @@ class CompodBigButton extends GetView {
         boxShadow: const [BoxShadow(color: Colors.black45, blurRadius: 2, spreadRadius: 2, offset: Offset(0, 2))],
         border: Border.all(color: _highlighted.isTrue ? Get.theme.colorScheme.secondaryVariant : Colors.white.withOpacity(0.6), width: 2),
         borderRadius: BorderRadius.circular(5),
-        gradient: LinearGradient(begin: const Alignment(0, 0.4), end: Alignment.bottomCenter, colors: [Get.theme.primaryColor, Get.theme.primaryColorDark]),
+        color: Get.theme.colorScheme.primary,
       ),
       height: _size,
       child: MaterialButton(
