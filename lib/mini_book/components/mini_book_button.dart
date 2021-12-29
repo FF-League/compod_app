@@ -12,12 +12,13 @@ class MiniBookButton extends GetView<MiniBookController> {
     return Obx(() => MaterialButton(
           key: key,
           disabledColor: Colors.grey,
-          color: Get.theme.colorScheme.secondaryVariant,
+          color: Get.theme.colorScheme.primary,
           onPressed: type == MiniBookButtonType.next ? (controller.isNextButtonEnabled ? controller.goToNextPage : null) : (controller.isPreviousButtonEnabled ? controller.goToPreviousPage : null),
           shape: const CircleBorder(),
           child: Icon(
             type == MiniBookButtonType.next ? Icons.arrow_forward_rounded : Icons.arrow_back_rounded,
             size: 24.0,
+            color: Colors.white,
           ),
         ));
   }

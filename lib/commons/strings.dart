@@ -1,3 +1,4 @@
+import 'package:compod_app/home/home_strings.dart';
 import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:compod_app/mini_book/mini_book_strings.dart';
 import 'package:flutter/foundation.dart';
@@ -8,6 +9,7 @@ class Strings extends Translations {
         ...commonStrings,
         ...HospitalizationTranslations.keys,
         ...MiniBookTranslations.keys,
+        ...HomeTranslations.keys
       };
 
   static Map<String, String> get commonStrings => {
@@ -23,7 +25,7 @@ class Strings extends Translations {
 enum StringsEnum {
   compod,
   continueButton,
-  sendButton
+  sendButton,
 }
 
 extension on StringsEnum {

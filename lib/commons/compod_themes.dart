@@ -7,21 +7,22 @@ class CompodThemes {
     primaryTextTheme: _blackTextTheme,
     textTheme: _blackTextTheme,
     primarySwatch: Colors.blue,
-    scaffoldBackgroundColor: Colors.blue.shade900,
+    scaffoldBackgroundColor: Colors.white,
+    backgroundColor: Colors.white,
     colorScheme: ColorScheme(
-      background: Colors.blue.shade900,
+      background: Colors.white,
       brightness: Brightness.light,
       error: Colors.red.shade800,
       onBackground: Colors.white,
       onError: Colors.black,
       onPrimary: Colors.black,
-      primary: Colors.blue,
+      primary: CompodColors.compodBlue,
       primaryVariant: Colors.lightBlueAccent,
       secondary: Colors.green,
       secondaryVariant: Colors.greenAccent,
       onSecondary: Colors.black,
       onSurface: Colors.black,
-      surface: Colors.lightBlue.shade200
+      surface: Colors.white
     ),
   );
 
@@ -46,4 +47,8 @@ class CompodThemes {
     fontFamily: CompodFonts.palanquin,
   );
 
+}
+
+class CompodColors {
+  static const compodBlue = Color(0xFF005A87);
 }

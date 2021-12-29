@@ -55,16 +55,8 @@ enum HospitalizationFieldsStringsEnum {
   description,
 }
 
-extension on HospitalizationStringsEnum {
-  String get name => toString();
-}
-
 extension HospitalizationStringsEnumExt on HospitalizationStringsEnum {
   String get tr => name.tr;
-}
-
-extension on HospitalizationFieldsStringsEnum {
-  String get name => toString();
 }
 
 extension HospitalizationFieldsStringsEnumExt on HospitalizationFieldsStringsEnum {

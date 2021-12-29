@@ -2,26 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CompodRaisedButton extends StatelessWidget {
-  const CompodRaisedButton({required this.buttonText, required this.action, Key? key}) : super(key: key);
+  const CompodRaisedButton({
+    Key? key,
+    required this.buttonText,
+    required this.action,
+    this.white = false,
+    this.padding = 16.0,
+  }) : super(key: key);
 
+  final double padding;
+  final bool white;
   final String buttonText;
   final void Function() action;
+
+  Color? get buttonColor => white ? Colors.white : Get.theme.primaryColor;
+
+  TextStyle? get buttonTextStyle =>
+      !white ? Get.textTheme.button?.copyWith(color: Colors.white) : null;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16),
+      padding: EdgeInsets.all(padding),
       child: MaterialButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
         onPressed: action,
-        color: Get.theme.primaryColorDark,
+        color: buttonColor,
         child: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(
-              buttonText.toUpperCase(),
-              style: Get.textTheme.button
-            ),
+            child: Text(buttonText, style: buttonTextStyle),
           ),
         ),
       ),
