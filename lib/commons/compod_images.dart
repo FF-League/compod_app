@@ -9,7 +9,7 @@ class CompodImages {
   static const osascoLogo   = 'assets/images/OSASCO_logo.png';
 
   static const check        = '${_path}Check.png';
-  static const checkBlack   = '${_path}Check_Black.png';
+  static const check_black  = '${_path}Check_Black.png';
   static const madRobot     = '${_path}MadRobot.png';
   static const doctor       = '${_path}Doctor.png';
   static const volunteer    = '${_path}Volunteer.png';
