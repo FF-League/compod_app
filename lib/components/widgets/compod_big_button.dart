@@ -12,9 +12,10 @@ class CompodBigButton extends GetView {
 
   static const _size = 100.0;
   static const _imageSize = 48.0;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Obx(() => Container(
       margin: const EdgeInsets.all(12.0),
       decoration: BoxDecoration(
         boxShadow: const [BoxShadow(color: Colors.black45, blurRadius: 2, spreadRadius: 2, offset: Offset(0, 2))],
@@ -36,6 +37,6 @@ class CompodBigButton extends GetView {
               ],
             ),
           )),
-    );
+    ));
   }
 }
