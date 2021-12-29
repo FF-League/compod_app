@@ -33,7 +33,7 @@ class CompodBigButton extends GetView {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 if (image != null) Image.asset(image ?? '', width: _imageSize, height: _imageSize),
-                Text(text.toUpperCase(), textAlign: TextAlign.right, style: Get.textTheme.button)
+                Text(text.toUpperCase(), textAlign: TextAlign.right, style: Get.textTheme.button?.copyWith(color: Colors.white))
               ],
             ),
           )),
