@@ -15,7 +15,7 @@ class CompodRaisedButton extends StatelessWidget {
   final String buttonText;
   final void Function() action;
 
-  Color? get buttonColor => white ? Colors.white : Get.theme.primaryColor;
+  Color? get buttonColor => white ? Colors.white : Get.theme.colorScheme.primary;
 
   TextStyle? get buttonTextStyle =>
       !white ? Get.textTheme.button?.copyWith(color: Colors.white) : null;
