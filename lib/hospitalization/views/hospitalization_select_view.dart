@@ -5,7 +5,7 @@ import 'package:compod_app/hospitalization/models/hospitalization_type.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'components/hospitalization_tile.dart';
+import 'components/hospitalization_big_button.dart';
 
 class HospitalizationSelectView extends GetView<HospitalizationController> {
   HospitalizationSelectView({Key? key}) : super(key: key);
@@ -20,10 +20,10 @@ class HospitalizationSelectView extends GetView<HospitalizationController> {
       body: ListView(
         children: [
           Padding(padding: const EdgeInsets.all(16), child: Text(HospitalizationStringsEnum.formsSelectViewHeader.tr, textAlign: TextAlign.center, style: Get.textTheme.headline4?.copyWith(color: Colors.white))),
-          const FormsTile(type: HospitalizationType.psychology),
-          const FormsTile(type: HospitalizationType.hospitalization),
-          const FormsTile(type: HospitalizationType.juridical),
-          const FormsTile(type: HospitalizationType.voluntary),
+          HospitalizationBigButton(type: HospitalizationType.psychology),
+          HospitalizationBigButton(type: HospitalizationType.hospitalization),
+          HospitalizationBigButton(type: HospitalizationType.juridical),
+          HospitalizationBigButton(type: HospitalizationType.voluntary),
         ],
       ),
     );

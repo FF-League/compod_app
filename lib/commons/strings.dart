@@ -5,12 +5,12 @@ import 'package:get/get.dart';
 
 class Strings extends Translations {
   Map<String, String> get getMaps => {
-        ...commonMaps,
+        ...commonStrings,
         ...HospitalizationTranslations.keys,
         ...MiniBookTranslations.keys,
       };
 
-  static Map<String, String> get commonMaps => {
+  static Map<String, String> get commonStrings => {
         StringsEnum.compod.name: 'COMPOD',
         StringsEnum.continueButton.name: 'Continuar',
         StringsEnum.sendButton.name: 'Enviar',
