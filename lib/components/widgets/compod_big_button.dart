@@ -11,7 +11,7 @@ class CompodBigButton extends GetView {
   final Function action;
 
   static const _size = 100.0;
-  static const _imageSize = 100.0;
+  static const _imageSize = 48.0;
   @override
   Widget build(BuildContext context) {
     return Container(
