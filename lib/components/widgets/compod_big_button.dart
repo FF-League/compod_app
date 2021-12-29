@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CompodBigButton extends GetView {
-  CompodBigButton({Key? key, required this.action, required this.text, required this.image}) : super(key: key);
+  CompodBigButton({Key? key, required this.action, required this.text, this.image}) : super(key: key);
 
   final _highlighted = false.obs;
 
   final String text;
-  final String image;
+  final String? image;
   final Function action;
 
   static const _size = 100.0;
@@ -31,7 +31,7 @@ class CompodBigButton extends GetView {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Image.asset(image, width: _imageSize, height: _imageSize),
+                if (image != null) Image.asset(image ?? '', width: _imageSize, height: _imageSize),
                 Text(text.toUpperCase(), textAlign: TextAlign.right, style: Get.textTheme.button)
               ],
             ),
