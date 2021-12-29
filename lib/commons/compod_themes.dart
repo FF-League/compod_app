@@ -43,7 +43,7 @@ class CompodThemes {
   );
 
   static const _textStyle = TextStyle(
-    color: Colors.black,
+    color: CompodColors.compodBlue,
     fontFamily: CompodFonts.palanquin,
   );
 

@@ -1,6 +1,7 @@
 import 'package:compod_app/home/home_strings.dart';
 import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:compod_app/mini_book/mini_book_strings.dart';
+import 'package:compod_app/voluntary/voluntary_strings.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
@@ -8,6 +9,7 @@ class Strings extends Translations {
   Map<String, String> get getMaps => {
         ...commonStrings,
         ...HospitalizationTranslations.keys,
+        ...VoluntaryTranslations.keys,
         ...MiniBookTranslations.keys,
         ...HomeTranslations.keys
       };
