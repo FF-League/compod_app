@@ -8,7 +8,7 @@ class CompodBigButton extends GetView {
 
   final String text;
   final String? image;
-  final Function action;
+  final void Function() action;
 
   static const _size = 100.0;
   static const _imageSize = 48.0;
@@ -25,7 +25,7 @@ class CompodBigButton extends GetView {
       ),
       height: _size,
       child: MaterialButton(
-          onPressed: () => action,
+          onPressed: action,
           onHighlightChanged: (highlight) => _highlighted.value = highlight,
           child: Padding(
             padding: const EdgeInsets.all(16.0),
