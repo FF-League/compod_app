@@ -9,18 +9,15 @@ class MiniBookController extends GetxController {
   Rx<List<Uint8List>> pdfPages = Rx(List.empty(growable: true));
 
   Rx<Uint8List?> currentPageBytes = Rx(null);
-  var currentPage = 1.obs;
+  final currentPage = RxInt(1);
 
   bool get isNextButtonEnabled => currentPage.value < (pdfDocument.value?.pagesCount ?? 0);
-  bool get isPreviousButtonEnabled => currentPage.value > 1;
 
-  Future<void> init() async {
-    await getPage(currentPage.value);
-  }
+  bool get isPreviousButtonEnabled => currentPage.value > 1;
 
   @override
   void onInit() async {
-    await init();
+    await getPage(currentPage.value);
     super.onInit();
   }
 

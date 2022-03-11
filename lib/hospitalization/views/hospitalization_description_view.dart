@@ -21,7 +21,7 @@ class HospitalizationDescriptionView extends StatelessWidget {
           Expanded(
             child: Container(
               width: double.infinity,
-              margin: const EdgeInsets.all(16),
+              margin: const EdgeInsets.all(16.0),
               decoration: BoxDecoration(
                 boxShadow: const [BoxShadow(color: Colors.black45, blurRadius: 2.0, spreadRadius: 2.0)],
                 borderRadius: BorderRadius.circular(8.0),
@@ -39,7 +39,7 @@ class HospitalizationDescriptionView extends StatelessWidget {
               ),
             ),
           ),
-          CompodRaisedButton(action: controller.goToFormInput, buttonText: StringsEnum.continueButton.tr),
+          CompodRaisedButton(action: controller.goToFormInput, buttonText: CommonStrings.continueButton.tr),
         ],
       ),
     );

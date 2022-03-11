@@ -2,6 +2,7 @@ import 'package:compod_app/commons/compod_fonts.dart';
 import 'package:flutter/material.dart';
 
 class CompodThemes {
+  CompodThemes._();
 
   static final theme = ThemeData(
     primaryTextTheme: _blackTextTheme,
@@ -17,9 +18,9 @@ class CompodThemes {
       onError: Colors.black,
       onPrimary: Colors.black,
       primary: CompodColors.compodBlue,
-      primaryVariant: Colors.lightBlueAccent,
+      primaryContainer: Colors.lightBlueAccent,
       secondary: Colors.green,
-      secondaryVariant: Colors.greenAccent,
+      secondaryContainer: Colors.greenAccent,
       onSecondary: Colors.black,
       onSurface: Colors.black,
       surface: Colors.white
@@ -50,5 +51,7 @@ class CompodThemes {
 }
 
 class CompodColors {
+  CompodColors._();
+
   static const compodBlue = Color(0xFF005A87);
 }

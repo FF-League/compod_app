@@ -9,9 +9,6 @@ import 'package:get/get.dart';
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
 
-  @override
-  get controller => Get.put(HomeController());
-
   static const buttonPadding = 6.0;
   static const padding = 16.0;
 
@@ -30,7 +27,7 @@ class HomeView extends GetView<HomeController> {
     ),
     CompodRaisedButton(
       buttonText: HomeStringsEnum.miniBook.tr,
-      action: () => Get.toNamed(RoutesEnum.minibook.route),
+      action: () => Get.toNamed(RoutesEnum.miniBook.route),
       white: true,
       padding: buttonPadding,
     ),

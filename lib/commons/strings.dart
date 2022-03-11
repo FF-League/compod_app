@@ -2,38 +2,60 @@ import 'package:compod_app/home/home_strings.dart';
 import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:compod_app/mini_book/mini_book_strings.dart';
 import 'package:compod_app/voluntary/voluntary_strings.dart';
-import 'package:flutter/foundation.dart';
-import 'package:get/get.dart';
+import 'package:get/get.dart' as g;
 
-class Strings extends Translations {
-  Map<String, String> get getMaps => {
-        ...commonStrings,
-        ...HospitalizationTranslations.keys,
-        ...VoluntaryTranslations.keys,
-        ...MiniBookTranslations.keys,
-        ...HomeTranslations.keys
-      };
+class Translations extends g.Translations {
+  Map<String, String> get getMaps => {...commonStrings, ...HospitalizationTranslations.keys, ...VoluntaryTranslations.keys, ...MiniBookTranslations.keys, ...HomeTranslations.keys};
 
   static Map<String, String> get commonStrings => {
-        StringsEnum.compod.name: 'COMPOD',
-        StringsEnum.continueButton.name: 'Continuar',
-        StringsEnum.sendButton.name: 'Enviar',
+        FormStrings.name.tr: 'Nome',
+        FormStrings.gender.tr: 'Sexo',
+        FormStrings.address.tr: 'Endereço',
+        FormStrings.male.tr: 'Masculino',
+        FormStrings.female.tr: 'Feminino',
+        FormStrings.other.tr: 'Outro',
+        FormStrings.age.tr: 'Idade',
+        FormStrings.phoneWithAreaCode.tr: 'Telefone com DDD',
+        FormStrings.job.tr: 'Profissão',
+        FormStrings.email.tr: 'E-mail',
+        FormStrings.description.tr: 'Descreva melhor a situação',
+        CommonStrings.compod.tr: 'COMPOD',
+        CommonStrings.continueButton.tr: 'Continuar',
+        CommonStrings.sendButton.tr: 'Enviar',
+        CommonStrings.connectionError.tr: 'Sem conexão com a internet. Por favor, verifique sua conexão e tente novamente.',
+        CommonStrings.internalError.tr: 'Ocorreu um erro ao conecar-se com o servidor. Por favor, tente novamente mais tarde.',
       };
 
   @override
   Map<String, Map<String, String>> get keys => {'pt_BR': getMaps};
 }
 
-enum StringsEnum {
+enum CommonStrings {
   compod,
   continueButton,
   sendButton,
+  connectionError,
+  internalError,
 }
 
-extension on StringsEnum {
-  String get name => describeEnum(this);
+extension StringsEnumExt on CommonStrings {
+  String get tr => toString().tr;
 }
 
-extension StringsEnumExt on StringsEnum {
-  String get tr => name.tr;
+enum FormStrings {
+  name,
+  age,
+  gender,
+  male,
+  female,
+  other,
+  email,
+  phoneWithAreaCode,
+  address,
+  job,
+  description,
+}
+
+extension FormStringsExt on FormStrings {
+  String get tr => toString().tr;
 }

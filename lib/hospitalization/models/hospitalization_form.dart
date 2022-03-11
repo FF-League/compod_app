@@ -7,7 +7,7 @@ class HospitalizationForm {
   var email = '';
   var age = 0;
   var phone = '';
-  var sex = '';
+  String? sex;
   var address = '';
   var text = '';
   HospitalizationType? treatment;

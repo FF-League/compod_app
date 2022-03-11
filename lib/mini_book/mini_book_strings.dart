@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 class MiniBookTranslations {
   static Map<String, String> get keys => {
-    MiniBookStringsEnum.name.name: 'Cartilha',
+    MiniBookStringsEnum.name.tr: 'Cartilha',
   };
 }
 
@@ -12,6 +12,6 @@ enum MiniBookStringsEnum {
 }
 
 extension MiniBookStringsEnumExt on MiniBookStringsEnum {
-  String get tr => name.tr;
+  String get tr => toString().tr;
 
 }

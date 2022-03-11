@@ -25,7 +25,7 @@ class CompodRaisedButton extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(padding),
       child: MaterialButton(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4.0)),
         onPressed: action,
         color: buttonColor,
         child: Center(

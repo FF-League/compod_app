@@ -6,10 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class MiniBookView extends GetView<MiniBookController> {
-  MiniBookView({Key? key}) : super(key: key);
-
-  @override
-  final controller = Get.put(MiniBookController());
+  const MiniBookView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,13 +23,10 @@ class MiniBookView extends GetView<MiniBookController> {
               const MiniBookButton(type: MiniBookButtonType.previous),
               Container(
                 color: Colors.black38,
-                child: Obx(
-                  () => Text(
-                    ' Página ${controller.currentPage}/${controller.pdfDocument.value?.pagesCount ?? 0} ',
-                    style:
-                        Get.textTheme.subtitle1?.copyWith(color: Colors.white),
-                  ),
-                ),
+                child: Obx(() => Text(
+                      ' Página ${controller.currentPage}/${controller.pdfDocument.value?.pagesCount ?? 0} ',
+                      style: Get.textTheme.subtitle1?.copyWith(color: Colors.white),
+                    )),
               ),
               const MiniBookButton(type: MiniBookButtonType.next),
             ],
@@ -40,25 +34,21 @@ class MiniBookView extends GetView<MiniBookController> {
         ],
       ),
       appBarTitle: MiniBookStringsEnum.name.tr,
-      body: Obx(
-        () => InteractiveViewer(
-          maxScale: 3.0,
-          child: Center(
-            child: Container(
-              color: Colors.white,
-              margin: const EdgeInsets.all(12.0),
-              child: pageContent,
+      body: Obx(() => InteractiveViewer(
+            maxScale: 3.0,
+            child: Center(
+              child: Container(
+                color: Colors.white,
+                margin: const EdgeInsets.all(12.0),
+                child: pageContent,
+              ),
             ),
-          ),
-        ),
-      ),
+          )),
     );
   }
 
   Widget get pageContent {
     final content = controller.currentPageBytes.value;
-    return content != null
-        ? Image(image: MemoryImage(content))
-        : const CircularProgressIndicator();
+    return content != null ? Image(image: MemoryImage(content)) : const CircularProgressIndicator();
   }
 }

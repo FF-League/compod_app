@@ -7,7 +7,7 @@ class HomeController extends GetxController {
     switch (type) {
       case HomeTileType.doctor: Get.toNamed(RoutesEnum.hospitalization.route);
         return;
-      case HomeTileType.anjinho: Get.toNamed(RoutesEnum.minibook.route);
+      case HomeTileType.anjinho: Get.toNamed(RoutesEnum.miniBook.route);
         return;
       default: return;
     }

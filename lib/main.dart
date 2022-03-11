@@ -1,6 +1,7 @@
 import 'package:compod_app/commons/compod_themes.dart';
 import 'package:compod_app/commons/routes.dart';
-import 'package:compod_app/commons/strings.dart';
+import 'package:compod_app/commons/strings.dart' as app_strings show Translations;
+import 'package:compod_app/commons/strings.dart' hide Translations;
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      translations: Strings(),
+      translations: app_strings.Translations(),
       locale: const Locale('pt', 'BR'),
-      title: StringsEnum.compod.tr,
+      title: CommonStrings.compod.tr,
       theme: CompodThemes.theme,
       getPages: Routes.pages,
       initialRoute: RoutesEnum.home.route,

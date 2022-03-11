@@ -8,10 +8,7 @@ import 'package:get/get.dart';
 import 'components/hospitalization_big_button.dart';
 
 class HospitalizationSelectView extends GetView<HospitalizationController> {
-  HospitalizationSelectView({Key? key}) : super(key: key);
-
-  @override
-  final controller = Get.put(HospitalizationController());
+  const HospitalizationSelectView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -9,9 +9,9 @@ enum VoluntaryType {
 extension VoluntaryTypeExt on VoluntaryType {
   String get text {
     switch (this) {
-      case VoluntaryType.psychology: return VoluntaryStringsEnum.psychology.tr;
-      case VoluntaryType.psychopedagogy: return VoluntaryStringsEnum.psychopedagogy.tr;
-      case VoluntaryType.others: return VoluntaryStringsEnum.others.tr;
+      case VoluntaryType.psychology: return VoluntaryStrings.psychology.tr;
+      case VoluntaryType.psychopedagogy: return VoluntaryStrings.psychopedagogy.tr;
+      case VoluntaryType.others: return VoluntaryStrings.others.tr;
     }
   }
 }

@@ -1,8 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:compod_app/commons/routes.dart';
+import 'package:compod_app/commons/strings.dart';
+import 'package:compod_app/components/failure_view.dart';
+import 'package:compod_app/components/success_view.dart';
+import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:compod_app/hospitalization/models/hospitalization_form.dart';
 import 'package:compod_app/hospitalization/models/hospitalization_type.dart';
-import 'package:compod_app/hospitalization/views/components/hospitalization_form_field.dart';
+import 'package:compod_app/components/compod_form_field.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -36,39 +40,45 @@ class HospitalizationController extends GetxController {
       FirebaseFirestore.instance
           .collection(collectionId)
           .add(form.value.toJson)
-          .then((_) => goToSuccessView())
-          .catchError((_, __) => goToFailureView());
+          .then(
+            (_) => goToSuccessView()
+          )
+          .catchError(
+            (_, __) => goToFailureView(),
+          );
     }
   }
 
-  void goToSuccessView() => Get.toNamed(RoutesEnum.hospitalizationSuccess.route);
+  void goToSuccessView() {
+    Get.to(SuccessView(
+      appBarText: HospitalizationStringsEnum.hospitalization.tr,
+      message: HospitalizationStringsEnum.successFormsMessage.tr,
+    ));
+  }
 
-  // ignore: avoid_returning_null_for_void
-  void goToFailureView() => null; // TODO Tela do Julio
+  void goToFailureView() {
+    Get.to(FailureView(
+      appBarText: HospitalizationStringsEnum.hospitalization.tr,
+      message: CommonStrings.internalError.tr,
+    ));
+  }
 
-  void updateFormContent(HospitalizationFormType type, String value) {
+  void updateFormContent(CompodFormType type, String value) {
     switch (type) {
-      case HospitalizationFormType.age:
-        form.update((val) => val?.age = int.tryParse(value) ?? 0);
-        break;
-      case HospitalizationFormType.text:
-        form.update((val) => val?.text = value);
-        break;
-      case HospitalizationFormType.name:
-        form.update((val) => val?.name = value);
-        break;
-      case HospitalizationFormType.email:
-        form.update((val) => val?.email = value);
-        break;
-      case HospitalizationFormType.phone:
-        form.update((val) => val?.phone = value);
-        break;
-      case HospitalizationFormType.job:
-        form.update((val) => val?.job = value);
-        break;
-      case HospitalizationFormType.address:
-        form.update((val) => val?.address = value);
-        break;
+      case CompodFormType.age:
+        return form.update((val) => val?.age = int.tryParse(value) ?? 0);
+      case CompodFormType.text:
+        return form.update((val) => val?.text = value);
+      case CompodFormType.name:
+        return form.update((val) => val?.name = value);
+      case CompodFormType.email:
+        return form.update((val) => val?.email = value);
+      case CompodFormType.phone:
+        return form.update((val) => val?.phone = value);
+      case CompodFormType.job:
+        return form.update((val) => val?.job = value);
+      case CompodFormType.address:
+        return form.update((val) => val?.address = value);
     }
   }
 }

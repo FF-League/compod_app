@@ -3,17 +3,17 @@ import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HospitalizationFormField extends GetView<HospitalizationController> {
-  const HospitalizationFormField({Key? key, required this.type}) : super(key: key);
+class CompodFormField extends GetView<HospitalizationController> {
+  const CompodFormField({Key? key, required this.type}) : super(key: key);
 
-  final HospitalizationFormType type;
+  final CompodFormType type;
 
   TextInputType get _keyboardType {
     switch (type) {
-      case HospitalizationFormType.name: return TextInputType.name;
-      case HospitalizationFormType.phone: return TextInputType.phone;
-      case HospitalizationFormType.age: return TextInputType.number;
-      case HospitalizationFormType.email: return TextInputType.emailAddress;
+      case CompodFormType.name: return TextInputType.name;
+      case CompodFormType.phone: return TextInputType.phone;
+      case CompodFormType.age: return TextInputType.number;
+      case CompodFormType.email: return TextInputType.emailAddress;
       default: return TextInputType.text;
     }
   }
@@ -21,8 +21,8 @@ class HospitalizationFormField extends GetView<HospitalizationController> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      minLines: type == HospitalizationFormType.text ? 6 : 1,
-      maxLines: type == HospitalizationFormType.text ? 6 : 1,
+      minLines: type == CompodFormType.text ? 6 : 1,
+      maxLines: type == CompodFormType.text ? 6 : 1,
       onChanged: (value) => controller.updateFormContent(type, value),
       validator: (value) => (value?.isEmpty ?? true) ? HospitalizationStringsEnum.thisFieldMustBeFilled.tr : null,
       key: key,
@@ -43,4 +43,4 @@ class HospitalizationFormField extends GetView<HospitalizationController> {
   }
 }
 
-enum HospitalizationFormType { name, job, email, age, phone, text, address }
+enum CompodFormType { name, job, email, age, phone, text, address }

@@ -2,11 +2,11 @@ import 'package:get/get.dart';
 
 class HomeTranslations {
   static Map<String, String> get keys => {
-    HomeStringsEnum.miniBook.name: 'Cartilha',
-    HomeStringsEnum.volunteer.name: 'Seja um voluntário',
-    HomeStringsEnum.hospitalization.name: 'Solicitar atendimento',
-    HomeStringsEnum.about.name: 'Sobre o COMPOD',
-    HomeStringsEnum.contact.name: 'Contato',
+    HomeStringsEnum.miniBook.tr: 'Cartilha',
+    HomeStringsEnum.volunteer.tr: 'Seja um voluntário',
+    HomeStringsEnum.hospitalization.tr: 'Solicitar atendimento',
+    HomeStringsEnum.about.tr: 'Sobre o COMPOD',
+    HomeStringsEnum.contact.tr: 'Contato',
   };
 }
 
@@ -20,5 +20,5 @@ enum HomeStringsEnum {
 }
 
 extension HomeStringsEnumExt on HomeStringsEnum {
-  String get tr => name.tr;
+  String get tr => toString().tr;
 }
