@@ -8,7 +8,6 @@ import 'package:compod_app/voluntary/models/voluntary_form.dart';
 import 'package:compod_app/voluntary/models/voluntary_type.dart';
 import 'package:compod_app/voluntary/voluntary_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class VoluntaryController extends GetxController {
@@ -22,19 +21,8 @@ class VoluntaryController extends GetxController {
   final description = RxString('');
   final name = RxString('');
 
-  Future<void> setupDescriptionValues(VoluntaryType type) async {
-    name.value = type.text;
-    final path = 'assets/texts/${type.name}_description.txt';
-    try {
-      final text = await rootBundle.loadString(path);
-      description.value = text;
-    } on Exception {
-      description.value = 'Não foi possível carregar a descrição';
-    }
-  }
-
   void selectVoluntaryType(VoluntaryType type) {
-    setupDescriptionValues(type);
+    name.value = type.text;
     form.update((val) => val?.type = type);
     Get.toNamed(RoutesEnum.voluntaryForm.route);
   }

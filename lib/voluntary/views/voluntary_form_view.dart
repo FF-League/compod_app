@@ -5,7 +5,6 @@ import 'package:compod_app/components/compod_form_text.dart';
 import 'package:compod_app/components/widgets/compod_app_bar.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
 import 'package:compod_app/voluntary/controller/voluntary_controller.dart';
-import 'package:compod_app/voluntary/models/voluntary_type.dart';
 import 'package:compod_app/voluntary/voluntary_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -45,7 +44,7 @@ class VoluntaryFormView extends GetView<VoluntaryController> {
               child: Column(
                 children: [
                   Text(
-                    controller.form.value.type?.text ?? '',
+                    controller.name.value,
                     textAlign: TextAlign.center,
                     style: Get.textTheme.headline6,
                   ),

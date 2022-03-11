@@ -29,11 +29,11 @@ class HospitalizationDescriptionView extends StatelessWidget {
               ),
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
+                  padding: const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 6.0),
                   child: Column(children: [
                     Obx(() => Text(controller.name.value, style: Get.textTheme.headline5, textAlign: TextAlign.center)),
-                    const SizedBox(height: 24.0),
-                    Obx(() => Text(controller.description.value, style: Get.textTheme.bodyText2, textAlign: TextAlign.justify)),
+                    const SizedBox(height: 8.0),
+                    Obx(() => Text(controller.description.value, style: Get.textTheme.bodyText2?.copyWith(color: Colors.black87), textAlign: TextAlign.justify)),
                   ]),
                 ),
               ),
