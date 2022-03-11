@@ -4,6 +4,7 @@ import 'package:compod_app/hospitalization/views/hospitalization_select_view.dar
 import 'package:compod_app/hospitalization/views/success_view.dart';
 import 'package:compod_app/home/view/home_view.dart';
 import 'package:compod_app/mini_book/view/mini_book_view.dart';
+import 'package:compod_app/voluntary/views/voluntary_select_view.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +17,7 @@ class Routes {
     GetPage(name: RoutesEnum.hospitalizationSuccess.route, page: () => const SuccessView()),
     GetPage(name: RoutesEnum.minibook.route, page: () => MiniBookView()),
     GetPage(name: RoutesEnum.home.route, page: () => HomeView()),
+    GetPage(name: RoutesEnum.voluntary.route, page: () => VoluntarySelectView()),
   ];
 }
 
@@ -26,6 +28,7 @@ enum RoutesEnum {
   hospitalizationDescription,
   minibook,
   home,
+  voluntary,
 }
 
 extension RoutesEnumExt on RoutesEnum {

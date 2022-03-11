@@ -24,7 +24,7 @@ class HomeView extends GetView<HomeController> {
     ),
     CompodRaisedButton(
       buttonText: HomeStringsEnum.volunteer.tr,
-      action: () {},
+      action: () => Get.toNamed(RoutesEnum.voluntary.route),
       white: true,
       padding: buttonPadding,
     ),
@@ -60,7 +60,7 @@ class HomeView extends GetView<HomeController> {
               padding: const EdgeInsets.all(padding),
               child: Image.asset(CompodImages.whiteLogo, height: 80),
             ),
-            Expanded(child: ListView(children: _buttonList)),
+            Expanded(child: Column(mainAxisAlignment: MainAxisAlignment.center, children: _buttonList)),
             Padding(
               child: Image.asset(CompodImages.osascoLogo, height: 80),
               padding: const EdgeInsets.all(padding),
