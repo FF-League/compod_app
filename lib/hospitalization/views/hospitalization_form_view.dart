@@ -9,7 +9,6 @@ import 'package:compod_app/components/compod_form_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 class HospitalizationFormView extends GetView<HospitalizationController> {
   HospitalizationFormView({Key? key}) : super(key: key);
 
@@ -46,9 +45,9 @@ class HospitalizationFormView extends GetView<HospitalizationController> {
                   const CompodFormText(data: FormStrings.age),
                   const CompodFormField(type: CompodFormType.age),
                   const CompodFormText(data: FormStrings.gender),
-                  CompodFormRadio(data: FormStrings.male, onChanged: (v) => controller.form.value.sex = v, groupValue: controller.form.value.sex ?? ''),
-                  CompodFormRadio(data: FormStrings.female, onChanged: (v) => controller.form.value.sex = v, groupValue: controller.form.value.sex ?? ''),
-                  CompodFormRadio(data: FormStrings.other, onChanged: (v) => controller.form.value.sex = v, groupValue: controller.form.value.sex ?? ''),
+                  Obx(() => CompodFormRadio(data: FormStrings.male, onChanged: (v) => controller.sex = v, groupValue: controller.sex)),
+                  Obx(() => CompodFormRadio(data: FormStrings.female, onChanged: (v) => controller.sex = v, groupValue: controller.sex)),
+                  Obx(() => CompodFormRadio(data: FormStrings.other, onChanged: (v) => controller.sex = v, groupValue: controller.sex)),
                   const CompodFormText(data: FormStrings.job),
                   const CompodFormField(type: CompodFormType.job),
                   const CompodFormText(data: FormStrings.address),

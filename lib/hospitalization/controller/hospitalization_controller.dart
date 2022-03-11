@@ -17,7 +17,10 @@ class HospitalizationController extends GetxController {
   var description = ''.obs;
   var name = ''.obs;
 
-  var form = HospitalizationForm().obs;
+  final form = HospitalizationForm().obs;
+
+  String get sex => form.value.sex ?? '';
+  set sex(v) => form.update((val) => val?.sex = v);
 
   void setupDescriptionValues(HospitalizationType type) async {
     name.value = type.text;

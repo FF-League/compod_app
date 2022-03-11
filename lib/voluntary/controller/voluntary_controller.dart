@@ -16,6 +16,9 @@ class VoluntaryController extends GetxController {
 
   final form = Rx<VoluntaryForm>(VoluntaryForm());
 
+  String get sex => form.value.sex ?? '';
+  set sex(v) => form.update((val) => val?.sex = v);
+
   final description = RxString('');
   final name = RxString('');
 

@@ -1,18 +1,18 @@
 import 'package:compod_app/commons/strings.dart';
 import 'package:compod_app/components/compod_form_field.dart';
+import 'package:compod_app/components/compod_form_radio.dart';
 import 'package:compod_app/components/compod_form_text.dart';
 import 'package:compod_app/components/widgets/compod_app_bar.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
 import 'package:compod_app/voluntary/controller/voluntary_controller.dart';
+import 'package:compod_app/voluntary/models/voluntary_type.dart';
 import 'package:compod_app/voluntary/voluntary_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../components/compod_form_radio.dart';
 
 class VoluntaryFormView extends GetView<VoluntaryController> {
   VoluntaryFormView({Key? key}) : super(key: key);
-
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
@@ -31,6 +31,7 @@ class VoluntaryFormView extends GetView<VoluntaryController> {
               style: Get.textTheme.headline4,
             ),
           ),
+
           Container(
             margin: const EdgeInsets.all(12.0),
             padding: const EdgeInsets.all(12.0),
@@ -43,14 +44,19 @@ class VoluntaryFormView extends GetView<VoluntaryController> {
               key: formKey,
               child: Column(
                 children: [
+                  Text(
+                    controller.form.value.type?.text ?? '',
+                    textAlign: TextAlign.center,
+                    style: Get.textTheme.headline6,
+                  ),
                   const CompodFormText(data: FormStrings.name),
                   const CompodFormField(type: CompodFormType.name),
                   const CompodFormText(data: FormStrings.age),
                   const CompodFormField(type: CompodFormType.age),
                   const CompodFormText(data: FormStrings.gender),
-                  CompodFormRadio(data: FormStrings.male, onChanged: (value) => controller.form.value.sex = value ?? '', groupValue: controller.form.value.sex),
-                  CompodFormRadio(data: FormStrings.female, onChanged: (value) => controller.form.value.sex = value ?? '', groupValue: controller.form.value.sex),
-                  CompodFormRadio(data: FormStrings.other, onChanged: (value) => controller.form.value.sex = value ?? '', groupValue: controller.form.value.sex),
+                  Obx(() => CompodFormRadio(data: FormStrings.male, onChanged: (v) => controller.sex = v, groupValue: controller.sex)),
+                  Obx(() => CompodFormRadio(data: FormStrings.female, onChanged: (v) => controller.sex = v, groupValue: controller.sex)),
+                  Obx(() => CompodFormRadio(data: FormStrings.other, onChanged: (v) => controller.sex = v, groupValue: controller.sex)),
                   const CompodFormText(data: FormStrings.job),
                   const CompodFormField(type: CompodFormType.job),
                   const CompodFormText(data: FormStrings.address),
