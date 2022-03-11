@@ -26,8 +26,6 @@ class MiniBookController extends GetxController {
   };
 
   void Function(DragEndDetails) get onPanEnd => (DragEndDetails details) {
-
-
     if (currentInteractionDelta > 0) {
       willGoToPreviousPage = true;
     } else if (currentInteractionDelta < 0) {

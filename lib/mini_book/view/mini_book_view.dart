@@ -35,7 +35,6 @@ class MiniBookView extends GetView<MiniBookController> {
       ),
       appBarTitle: MiniBookStringsEnum.name.tr,
       body: GestureDetector(
-        onTap: () => print('TAP'),
         onPanUpdate: controller.onPanUpdate,
         onPanEnd: controller.onPanEnd,
         child: InteractiveViewer(
