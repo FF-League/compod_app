@@ -22,7 +22,12 @@ class VoluntaryController extends GetxController {
   Future<void> setupDescriptionValues(VoluntaryType type) async {
     name.value = type.text;
     final path = 'assets/texts/${type.name}_description.txt';
-    description.value = await rootBundle.loadString(path);
+    try {
+      final text = await rootBundle.loadString(path);
+      description.value = text;
+    } on Exception {
+      description.value = 'Não foi possível carregar a descrição';
+    }
   }
 
   void selectVoluntaryType(VoluntaryType type) {

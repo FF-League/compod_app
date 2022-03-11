@@ -6,6 +6,7 @@ import 'package:compod_app/hospitalization/views/hospitalization_form_view.dart'
 import 'package:compod_app/hospitalization/views/hospitalization_select_view.dart';
 import 'package:compod_app/mini_book/mini_book_bindings.dart';
 import 'package:compod_app/mini_book/view/mini_book_view.dart';
+import 'package:compod_app/voluntary/views/voluntary_form_view.dart';
 import 'package:compod_app/voluntary/views/voluntary_select_view.dart';
 import 'package:compod_app/voluntary/voluntary_bindings.dart';
 import 'package:get/get.dart';
@@ -19,6 +20,7 @@ class Routes {
     GetPage(name: RoutesEnum.miniBook.route, page: () => const MiniBookView(), binding: MiniBookBindings()),
     GetPage(name: RoutesEnum.home.route, page: () => const HomeView(), binding: HomeBindings()),
     GetPage(name: RoutesEnum.voluntary.route, page: () => const VoluntarySelectView(), binding: VoluntaryBindings()),
+    GetPage(name: RoutesEnum.voluntaryForm.route, page: () => VoluntaryFormView()),
   ];
 }
 

@@ -18,7 +18,8 @@ class Translations extends g.Translations {
         FormStrings.phoneWithAreaCode.tr: 'Telefone com DDD',
         FormStrings.job.tr: 'Profissão',
         FormStrings.email.tr: 'E-mail',
-        FormStrings.description.tr: 'Descreva melhor a situação',
+        FormStrings.describeSituation.tr: 'Descreva melhor a situação',
+        FormStrings.tellUsAboutYou.tr: 'Conte-nos um pouco sobre você',
         CommonStrings.compod.tr: 'COMPOD',
         CommonStrings.continueButton.tr: 'Continuar',
         CommonStrings.sendButton.tr: 'Enviar',
@@ -53,7 +54,8 @@ enum FormStrings {
   phoneWithAreaCode,
   address,
   job,
-  description,
+  describeSituation,
+  tellUsAboutYou,
 }
 
 extension FormStringsExt on FormStrings {

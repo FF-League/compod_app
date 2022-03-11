@@ -9,6 +9,7 @@ class CompodScaffold extends Scaffold {
     Key? key,
     FloatingActionButtonLocation? floatingActionButtonLocation,
     Widget? floatingActionButton,
+    Color? backgroundColor,
   }) : super(
           key: key,
           floatingActionButton: floatingActionButton,
@@ -22,7 +23,13 @@ class CompodScaffold extends Scaffold {
                 color: Get.theme.backgroundColor,
                 borderRadius: const BorderRadius.only(topLeft: Radius.circular(50)),
               ),
-              child: body,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: backgroundColor ?? Get.theme.backgroundColor,
+                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(50)),
+                ),
+                child: body,
+              ),
             ),
           ),
         );

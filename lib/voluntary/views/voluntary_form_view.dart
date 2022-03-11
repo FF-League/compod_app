@@ -10,8 +10,8 @@ import 'package:get/get.dart';
 
 import '../../components/compod_form_radio.dart';
 
-class VolunaryFormView extends GetView<VoluntaryController> {
-  VolunaryFormView({Key? key}) : super(key: key);
+class VoluntaryFormView extends GetView<VoluntaryController> {
+  VoluntaryFormView({Key? key}) : super(key: key);
 
 
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
@@ -26,8 +26,9 @@ class VolunaryFormView extends GetView<VoluntaryController> {
             padding: const EdgeInsets.all(16.0),
             child: Text(
               VoluntaryStrings.fillFormWithYourData.tr,
+              softWrap: true,
               textAlign: TextAlign.center,
-              style: Get.textTheme.headline4?.copyWith(color: Colors.white),
+              style: Get.textTheme.headline4,
             ),
           ),
           Container(
@@ -58,7 +59,7 @@ class VolunaryFormView extends GetView<VoluntaryController> {
                   const CompodFormField(type: CompodFormType.phone),
                   const CompodFormText(data: FormStrings.email),
                   const CompodFormField(type: CompodFormType.email),
-                  const CompodFormText(data: FormStrings.description),
+                  const CompodFormText(data: FormStrings.tellUsAboutYou),
                   const CompodFormField(type: CompodFormType.text),
                 ],
               ),

@@ -12,7 +12,7 @@ class CompodFormRadio extends GetView<HospitalizationController> {
 
   @override
   Widget build(BuildContext context) {
-    return Obx(() => ListTile(
+    return ListTile(
           title: Text(data.tr, style: Get.textTheme.bodyText1),
           leading: Radio<String>(
             activeColor: Get.theme.colorScheme.secondary,
@@ -20,6 +20,6 @@ class CompodFormRadio extends GetView<HospitalizationController> {
             onChanged: onChanged,
             groupValue: groupValue,
           ),
-        ));
+        );
   }
 }

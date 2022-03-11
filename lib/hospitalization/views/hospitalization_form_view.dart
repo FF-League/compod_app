@@ -57,7 +57,7 @@ class HospitalizationFormView extends GetView<HospitalizationController> {
                   const CompodFormField(type: CompodFormType.phone),
                   const CompodFormText(data: FormStrings.email),
                   const CompodFormField(type: CompodFormType.email),
-                  const CompodFormText(data: FormStrings.description),
+                  const CompodFormText(data: FormStrings.describeSituation),
                   const CompodFormField(type: CompodFormType.text),
                 ],
               ),

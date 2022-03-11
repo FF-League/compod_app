@@ -11,11 +11,11 @@ class MiniBookView extends GetView<MiniBookController> {
   @override
   Widget build(BuildContext context) {
     return CompodScaffold(
+      backgroundColor: Colors.black12,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Container(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -34,16 +34,21 @@ class MiniBookView extends GetView<MiniBookController> {
         ],
       ),
       appBarTitle: MiniBookStringsEnum.name.tr,
-      body: Obx(() => InteractiveViewer(
-            maxScale: 3.0,
-            child: Center(
-              child: Container(
-                color: Colors.white,
-                margin: const EdgeInsets.all(12.0),
-                child: pageContent,
+      body: GestureDetector(
+        onTap: () => print('TAP'),
+        onPanUpdate: controller.onPanUpdate,
+        onPanEnd: controller.onPanEnd,
+        child: InteractiveViewer(
+              maxScale: 3.0,
+              child: Center(
+                child: Container(
+                  color: Colors.white,
+                  margin: const EdgeInsets.all(12.0),
+                  child: Obx(() => pageContent),
+                ),
               ),
             ),
-          )),
+      ),
     );
   }
 

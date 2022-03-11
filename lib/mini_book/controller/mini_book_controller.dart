@@ -1,5 +1,6 @@
 import 'dart:typed_data';
 
+import 'package:flutter/gestures.dart';
 import 'package:get/get.dart';
 import 'package:native_pdf_renderer/native_pdf_renderer.dart';
 
@@ -11,9 +12,39 @@ class MiniBookController extends GetxController {
   Rx<Uint8List?> currentPageBytes = Rx(null);
   final currentPage = RxInt(1);
 
+  var currentInteractionDelta = 0.0;
+
+  bool willGoToPreviousPage = false;
+  bool willGoToNextPage = false;
+
   bool get isNextButtonEnabled => currentPage.value < (pdfDocument.value?.pagesCount ?? 0);
 
   bool get isPreviousButtonEnabled => currentPage.value > 1;
+
+  void Function(DragUpdateDetails) get onPanUpdate => (DragUpdateDetails details) {
+    currentInteractionDelta += details.delta.dx;
+  };
+
+  void Function(DragEndDetails) get onPanEnd => (DragEndDetails details) {
+
+
+    if (currentInteractionDelta > 0) {
+      willGoToPreviousPage = true;
+    } else if (currentInteractionDelta < 0) {
+      willGoToNextPage = true;
+    }
+
+    currentInteractionDelta = 0.0;
+
+    if (willGoToNextPage) {
+      willGoToNextPage = false;
+      goToNextPage();
+    }
+    if (willGoToPreviousPage) {
+      willGoToPreviousPage = false;
+      goToPreviousPage();
+    }
+  };
 
   @override
   void onInit() async {
@@ -31,12 +62,14 @@ class MiniBookController extends GetxController {
   Future<void> goToNextPage() async {
     if (currentPage < (pdfDocument.value?.pagesCount ?? 0)) {
       await getPage(++currentPage.value);
+      willGoToNextPage = false;
     }
   }
 
   Future<void> goToPreviousPage() async {
     if (currentPage > 1) {
       await getPage(--currentPage.value);
+      willGoToPreviousPage = false;
     }
   }
 }

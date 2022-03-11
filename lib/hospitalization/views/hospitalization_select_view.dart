@@ -16,7 +16,8 @@ class HospitalizationSelectView extends GetView<HospitalizationController> {
       appBarTitle: HospitalizationStringsEnum.hospitalization.tr,
       body: ListView(
         children: [
-          Padding(padding: const EdgeInsets.all(16), child: Text(HospitalizationStringsEnum.formsSelectViewHeader.tr, textAlign: TextAlign.center, style: Get.textTheme.headline4)),
+          const SizedBox(height: 20),
+          Padding(padding: const EdgeInsets.all(16), child: Text(HospitalizationStringsEnum.formsSelectViewHeader.tr, textAlign: TextAlign.end, style: Get.textTheme.headline4)),
           HospitalizationBigButton(type: HospitalizationType.psychology),
           HospitalizationBigButton(type: HospitalizationType.hospitalization),
           HospitalizationBigButton(type: HospitalizationType.juridical),
