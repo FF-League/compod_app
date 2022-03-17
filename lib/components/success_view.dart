@@ -1,5 +1,6 @@
 import 'package:compod_app/commons/compod_images.dart';
 import 'package:compod_app/components/widgets/compod_app_bar.dart';
+import 'package:compod_app/components/widgets/compod_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -11,8 +12,8 @@ class SuccessView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: CompodAppBar(text: appBarText),
+    return CompodScaffold(
+        appBarTitle: appBarText,
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),

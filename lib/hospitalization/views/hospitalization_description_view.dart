@@ -1,6 +1,7 @@
 import 'package:compod_app/commons/strings.dart';
 import 'package:compod_app/components/widgets/compod_app_bar.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
+import 'package:compod_app/components/widgets/compod_scaffold.dart';
 import 'package:compod_app/hospitalization/controller/hospitalization_controller.dart';
 import 'package:compod_app/hospitalization/hospitalization_strings.dart';
 import 'package:flutter/material.dart';
@@ -13,8 +14,8 @@ class HospitalizationDescriptionView extends StatelessWidget {
   Widget build(BuildContext context) {
     final HospitalizationController controller = Get.find();
 
-    return Scaffold(
-      appBar: CompodAppBar(text: HospitalizationStringsEnum.hospitalization.tr),
+    return CompodScaffold(
+      appBarTitle: HospitalizationStringsEnum.hospitalization.tr,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

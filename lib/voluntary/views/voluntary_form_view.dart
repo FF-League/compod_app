@@ -4,6 +4,7 @@ import 'package:compod_app/components/compod_form_radio.dart';
 import 'package:compod_app/components/compod_form_text.dart';
 import 'package:compod_app/components/widgets/compod_app_bar.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
+import 'package:compod_app/components/widgets/compod_scaffold.dart';
 import 'package:compod_app/voluntary/controller/voluntary_controller.dart';
 import 'package:compod_app/voluntary/voluntary_strings.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +18,8 @@ class VoluntaryFormView extends GetView<VoluntaryController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CompodAppBar(text: VoluntaryStrings.title.tr),
+    return CompodScaffold(
+      appBarTitle: VoluntaryStrings.title.tr,
       body: ListView(
         children: [
           Padding(
