@@ -1,12 +1,11 @@
 import 'package:compod_app/commons/strings.dart';
-import 'package:compod_app/components/widgets/compod_app_bar.dart';
+import 'package:compod_app/components/compod_form_field.dart';
+import 'package:compod_app/components/compod_form_radio.dart';
+import 'package:compod_app/components/compod_form_text.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
 import 'package:compod_app/components/widgets/compod_scaffold.dart';
 import 'package:compod_app/hospitalization/controller/hospitalization_controller.dart';
 import 'package:compod_app/hospitalization/hospitalization_strings.dart';
-import 'package:compod_app/components/compod_form_field.dart';
-import 'package:compod_app/components/compod_form_radio.dart';
-import 'package:compod_app/components/compod_form_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,5 +1,4 @@
 import 'package:compod_app/commons/compod_images.dart';
-import 'package:compod_app/components/widgets/compod_app_bar.dart';
 import 'package:compod_app/components/widgets/compod_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
