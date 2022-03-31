@@ -25,6 +25,7 @@ class Translations extends g.Translations {
         CommonStrings.sendButton.tr: 'Enviar',
         CommonStrings.connectionError.tr: 'Sem conexão com a internet. Por favor, verifique sua conexão e tente novamente.',
         CommonStrings.internalError.tr: 'Ocorreu um erro ao conecar-se com o servidor. Por favor, tente novamente mais tarde.',
+        CommonStrings.backButton.tr: 'Voltar',
       };
 
   @override
@@ -37,6 +38,7 @@ enum CommonStrings {
   sendButton,
   connectionError,
   internalError,
+  backButton,
 }
 
 extension StringsEnumExt on CommonStrings {

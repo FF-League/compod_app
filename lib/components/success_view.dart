@@ -1,4 +1,7 @@
 import 'package:compod_app/commons/compod_images.dart';
+import 'package:compod_app/commons/routes.dart';
+import 'package:compod_app/commons/strings.dart';
+import 'package:compod_app/components/widgets/compod_raised_button.dart';
 import 'package:compod_app/components/widgets/compod_scaffold.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -19,11 +22,13 @@ class SuccessView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Image.asset(CompodImages.check, height: context.width * 0.6, width: context.width * 0.6),
-                Text(message, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.white)),
+                Image.asset(CompodImages.check, height: context.width * 0.15, width: context.width * 0.15,fit: BoxFit.fill,),
+                Text(message, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.black)),
+                CompodRaisedButton(buttonText: CommonStrings.backButton.tr, action: () => Get.toNamed(RoutesEnum.home.route))
               ],
             ),
           ),
-        ));
+        )
+    );
   }
 }
