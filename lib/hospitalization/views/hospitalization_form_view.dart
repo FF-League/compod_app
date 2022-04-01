@@ -62,7 +62,10 @@ class HospitalizationFormView extends GetView<HospitalizationController> {
               ),
             ),
           ),
-          CompodRaisedButton(buttonText: CommonStrings.sendButton.tr, action: () => controller.sendForm(formKey)),
+          Padding(
+              padding: EdgeInsets.only(left: 100,right: 100),
+              child: CompodRaisedButton(buttonText: CommonStrings.sendButton.tr, action: () => controller.sendForm(formKey),),
+          )
         ],
       ),
     );

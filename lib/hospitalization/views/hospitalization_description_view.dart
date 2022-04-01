@@ -22,12 +22,15 @@ class HospitalizationDescriptionView extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(40.0, 40.0, 40.0, 24.0),
                 child: Column(children: [
-                  Obx(() => Text(controller.description.value, style: Get.textTheme.bodyText1?.copyWith(color: Colors.black.withOpacity(0.8)), textAlign: TextAlign.justify)),
+                  Obx(() => Text(controller.description.value, style: Get.textTheme.bodyText1?.copyWith(color: Colors.black.withOpacity(0.8), fontFamily: 'Nunito-SemiBold.ttf', fontWeight: FontWeight.w600), textAlign: TextAlign.justify)),
+                  Padding(
+                      padding: EdgeInsets.fromLTRB(60, 150, 60, 36),
+                      child: CompodRaisedButton(action: controller.goToFormInput, buttonText: CommonStrings.continueButton.tr,padding: 0,)
+                  ),
                 ]),
               ),
             ),
           ),
-          CompodRaisedButton(action: controller.goToFormInput, buttonText: CommonStrings.continueButton.tr),
         ],
       ),
     );

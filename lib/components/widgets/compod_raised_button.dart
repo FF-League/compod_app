@@ -18,7 +18,7 @@ class CompodRaisedButton extends StatelessWidget {
   Color? get buttonColor => white ? Colors.white : Get.theme.colorScheme.primary;
 
   TextStyle? get buttonTextStyle =>
-      !white ? Get.textTheme.button?.copyWith(color: Colors.white) : null;
+      !white ? Get.textTheme.button?.copyWith(color: Colors.white, fontFamily: 'Nunito-Bold.ttf',fontSize: 16) : null;
 
   @override
   Widget build(BuildContext context) {

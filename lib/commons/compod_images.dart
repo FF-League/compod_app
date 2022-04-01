@@ -8,7 +8,7 @@ class CompodImages {
   static const osascoLogo       = 'assets/images/OSASCO_logo.png';
 
   static const check            = '$_path/Check.png';
-  static const madRobot         = '$_path/MadRobot.png';
+  static const fail             = '$_path/Fail.png';
   static const doctor           = '$_path/Doctor.png';
   static const volunteer        = '$_path/Volunteer.png';
   static const donate           = '$_path/Donate.png';

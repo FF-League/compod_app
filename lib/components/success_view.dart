@@ -1,8 +1,8 @@
 import 'package:compod_app/commons/compod_images.dart';
-import 'package:compod_app/commons/routes.dart';
 import 'package:compod_app/commons/strings.dart';
 import 'package:compod_app/components/widgets/compod_raised_button.dart';
 import 'package:compod_app/components/widgets/compod_scaffold.dart';
+import 'package:compod_app/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -19,13 +19,18 @@ class SuccessView extends StatelessWidget {
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.asset(CompodImages.check, height: context.width * 0.15, width: context.width * 0.15,fit: BoxFit.fill,),
-                Text(message, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.black)),
-                CompodRaisedButton(buttonText: CommonStrings.backButton.tr, action: () => Get.toNamed(RoutesEnum.home.route))
-              ],
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const SizedBox(),
+                  Image.asset(CompodImages.check, height: context.width * 0.2, width: context.width * 0.2),
+                  Text(message, textAlign: TextAlign.center, style: Get.textTheme.headline6?.copyWith(color: Colors.black, fontFamily: 'Nunito-SemiBold.ttf', fontWeight: FontWeight.w400)),
+                  Padding(
+                  padding: const EdgeInsets.only(left: 90, right: 90, ),
+                  child: CompodRaisedButton(buttonText: CommonStrings.backButton.tr, action: () => Get.to(() => const HomeView())),
+                  ),
+                  const SizedBox()
+                ],
             ),
           ),
         )

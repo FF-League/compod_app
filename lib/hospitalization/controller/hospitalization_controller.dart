@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:compod_app/commons/routes.dart';
-import 'package:compod_app/commons/strings.dart';
 import 'package:compod_app/components/failure_view.dart';
 import 'package:compod_app/components/success_view.dart';
 import 'package:compod_app/hospitalization/hospitalization_strings.dart';
@@ -62,7 +61,7 @@ class HospitalizationController extends GetxController {
   void goToFailureView() {
     Get.to(FailureView(
       appBarText: HospitalizationStringsEnum.hospitalization.tr,
-      message: CommonStrings.internalError.tr,
+      message: HospitalizationStringsEnum.failureFormsMessage.tr,
     ));
   }
 
